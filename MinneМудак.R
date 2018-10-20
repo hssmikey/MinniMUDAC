@@ -1,0 +1,6 @@
+library(readr)
+library(haven)
+df <- read_sav("Downloads/anes_timeseries_cdf_sav/anes_timeseries_cdf.sav")
+write_csv(df, "anes_timeseries.csv")
+df <- read_csv("anes_timeseries.csv")
+View(head(df))
