@@ -1,0 +1,737 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'nhgis0015_ds189_2012_county'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             2012
+Geographic level: County (by State)
+Dataset:          2012 American Community Survey: 1-Year Data
+   NHGIS code:    2012_ACS1
+   NHGIS ID:      ds189
+Breakdown(s):     Geographic Subarea:
+                     Total area (00)
+Data type(s):     (E) Estimates
+                  (M) Margins of error
+ 
+Tables:
+ 
+1. Sex by Age
+   Universe:    Total population
+   Source code: B01001
+   NHGIS code:  OIL
+ 
+2. Total Population
+   Universe:    Total population
+   Source code: B01003
+   NHGIS code:  OJE
+ 
+3. Race
+   Universe:    Total population
+   Source code: B02001
+   NHGIS code:  OJF
+ 
+4. Place of Birth by Individual Income in the Past 12 Months (in 2012 Inflation-Adjusted Dollars) in the United States
+   Universe:    Population 15 years and over in the United States
+   Source code: B06010
+   NHGIS code:  OMR
+ 
+5. Means of Transportation to Work
+   Universe:    Workers 16 years and over
+   Source code: C08301
+   NHGIS code:  ORW
+ 
+6. Travel Time to Work
+   Universe:    Workers 16 years and over who did not work at home
+   Source code: B08303
+   NHGIS code:  ORZ
+ 
+7. Household Type by Household Size
+   Universe:    Households
+   Source code: B11016
+   NHGIS code:  OV2
+ 
+8. Educational Attainment for the Population 25 Years and Over
+   Universe:    Population 25 years and over
+   Source code: C15003
+   NHGIS code:  OY6
+ 
+9. Employment Status by Disability Status
+   Universe:    Civilian noninstitutionalized population 18 to 64 years
+   Source code: C18120
+   NHGIS code:  O3V
+ 
+10. Household Income in the Past 12 Months (in 2012 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19001
+    NHGIS code:  O34
+ 
+11. Types of Health Insurance Coverage by Age
+    Universe:    Civilian noninstitutionalized population
+    Source code: C27010
+    NHGIS code:  PJY
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        REGIONA:     Region Code
+        DIVISIONA:   Division Code
+        STATE:       State Name
+        STATEA:      State Code
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        COUSUBA:     County Subdivision Code
+        PLACEA:      Place Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        ANRCA:       Alaska Native Regional Corporation Code
+        CBSAA:       Metropolitan Statistical Area/Micropolitan Statistical Area Code
+        CSAA:        Combined Statistical Area Code
+        METDIVA:     Metropolitan Division Code
+        NECTAA:      New England City and Town Area Code
+        CNECTAA:     Combined New England City and Town Area Code
+        NECTADIVA:   New England City and Town Area Division Code
+        UAA:         Urban Area Code
+        CDCURRA:     Congressional District (2013-2015, 113th Congress) Code
+        SDELMA:      School District (Elementary)/Remainder Code
+        SDSECA:      School District (Secondary)/Remainder Code
+        SDUNIA:      School District (Unified)/Remainder Code
+        PUMA5A:      Public Use Microdata Sample Area (PUMA) Code
+ 
+Data Type (E):
+    Estimates
+ 
+        NAME_E:      Area Name
+ 
+    Table 1:     Sex by Age
+    Universe:    Total population
+    Source code: B01001
+    NHGIS code:  OIL
+        OILE001:     Total
+        OILE002:     Male
+        OILE003:     Male: Under 5 years
+        OILE004:     Male: 5 to 9 years
+        OILE005:     Male: 10 to 14 years
+        OILE006:     Male: 15 to 17 years
+        OILE007:     Male: 18 and 19 years
+        OILE008:     Male: 20 years
+        OILE009:     Male: 21 years
+        OILE010:     Male: 22 to 24 years
+        OILE011:     Male: 25 to 29 years
+        OILE012:     Male: 30 to 34 years
+        OILE013:     Male: 35 to 39 years
+        OILE014:     Male: 40 to 44 years
+        OILE015:     Male: 45 to 49 years
+        OILE016:     Male: 50 to 54 years
+        OILE017:     Male: 55 to 59 years
+        OILE018:     Male: 60 and 61 years
+        OILE019:     Male: 62 to 64 years
+        OILE020:     Male: 65 and 66 years
+        OILE021:     Male: 67 to 69 years
+        OILE022:     Male: 70 to 74 years
+        OILE023:     Male: 75 to 79 years
+        OILE024:     Male: 80 to 84 years
+        OILE025:     Male: 85 years and over
+        OILE026:     Female
+        OILE027:     Female: Under 5 years
+        OILE028:     Female: 5 to 9 years
+        OILE029:     Female: 10 to 14 years
+        OILE030:     Female: 15 to 17 years
+        OILE031:     Female: 18 and 19 years
+        OILE032:     Female: 20 years
+        OILE033:     Female: 21 years
+        OILE034:     Female: 22 to 24 years
+        OILE035:     Female: 25 to 29 years
+        OILE036:     Female: 30 to 34 years
+        OILE037:     Female: 35 to 39 years
+        OILE038:     Female: 40 to 44 years
+        OILE039:     Female: 45 to 49 years
+        OILE040:     Female: 50 to 54 years
+        OILE041:     Female: 55 to 59 years
+        OILE042:     Female: 60 and 61 years
+        OILE043:     Female: 62 to 64 years
+        OILE044:     Female: 65 and 66 years
+        OILE045:     Female: 67 to 69 years
+        OILE046:     Female: 70 to 74 years
+        OILE047:     Female: 75 to 79 years
+        OILE048:     Female: 80 to 84 years
+        OILE049:     Female: 85 years and over
+ 
+    Table 2:     Total Population
+    Universe:    Total population
+    Source code: B01003
+    NHGIS code:  OJE
+        OJEE001:     Total
+ 
+    Table 3:     Race
+    Universe:    Total population
+    Source code: B02001
+    NHGIS code:  OJF
+        OJFE001:     Total
+        OJFE002:     White alone
+        OJFE003:     Black or African American alone
+        OJFE004:     American Indian and Alaska Native alone
+        OJFE005:     Asian alone
+        OJFE006:     Native Hawaiian and Other Pacific Islander alone
+        OJFE007:     Some other race alone
+        OJFE008:     Two or more races
+        OJFE009:     Two or more races: Two races including Some other race
+        OJFE010:     Two or more races: Two races excluding Some other race, and three or more races
+ 
+    Table 4:     Place of Birth by Individual Income in the Past 12 Months (in 2012 Inflation-Adjusted Dollars) in the United States
+    Universe:    Population 15 years and over in the United States
+    Source code: B06010
+    NHGIS code:  OMR
+        OMRE001:     Total
+        OMRE002:     No income
+        OMRE003:     With income
+        OMRE004:     With income: $1 to $9,999 or loss
+        OMRE005:     With income: $10,000 to $14,999
+        OMRE006:     With income: $15,000 to $24,999
+        OMRE007:     With income: $25,000 to $34,999
+        OMRE008:     With income: $35,000 to $49,999
+        OMRE009:     With income: $50,000 to $64,999
+        OMRE010:     With income: $65,000 to $74,999
+        OMRE011:     With income: $75,000 or more
+        OMRE012:     Born in state of residence
+        OMRE013:     Born in state of residence: No income
+        OMRE014:     Born in state of residence: With income
+        OMRE015:     Born in state of residence: With income: $1 to $9,999 or loss
+        OMRE016:     Born in state of residence: With income: $10,000 to $14,999
+        OMRE017:     Born in state of residence: With income: $15,000 to $24,999
+        OMRE018:     Born in state of residence: With income: $25,000 to $34,999
+        OMRE019:     Born in state of residence: With income: $35,000 to $49,999
+        OMRE020:     Born in state of residence: With income: $50,000 to $64,999
+        OMRE021:     Born in state of residence: With income: $65,000 to $74,999
+        OMRE022:     Born in state of residence: With income: $75,000 or more
+        OMRE023:     Born in other state in the United States
+        OMRE024:     Born in other state in the United States: No income
+        OMRE025:     Born in other state in the United States: With income
+        OMRE026:     Born in other state in the United States: With income: $1 to $9,999 or loss
+        OMRE027:     Born in other state in the United States: With income: $10,000 to $14,999
+        OMRE028:     Born in other state in the United States: With income: $15,000 to $24,999
+        OMRE029:     Born in other state in the United States: With income: $25,000 to $34,999
+        OMRE030:     Born in other state in the United States: With income: $35,000 to $49,999
+        OMRE031:     Born in other state in the United States: With income: $50,000 to $64,999
+        OMRE032:     Born in other state in the United States: With income: $65,000 to $74,999
+        OMRE033:     Born in other state in the United States: With income: $75,000 or more
+        OMRE034:     Native; born outside the United States
+        OMRE035:     Native; born outside the United States: No income
+        OMRE036:     Native; born outside the United States: With income
+        OMRE037:     Native; born outside the United States: With income: $1 to $9,999 or loss
+        OMRE038:     Native; born outside the United States: With income: $10,000 to $14,999
+        OMRE039:     Native; born outside the United States: With income: $15,000 to $24,999
+        OMRE040:     Native; born outside the United States: With income: $25,000 to $34,999
+        OMRE041:     Native; born outside the United States: With income: $35,000 to $49,999
+        OMRE042:     Native; born outside the United States: With income: $50,000 to $64,999
+        OMRE043:     Native; born outside the United States: With income: $65,000 to $74,999
+        OMRE044:     Native; born outside the United States: With income: $75,000 or more
+        OMRE045:     Foreign born
+        OMRE046:     Foreign born: No income
+        OMRE047:     Foreign born: With income
+        OMRE048:     Foreign born: With income: $1 to $9,999 or loss
+        OMRE049:     Foreign born: With income: $10,000 to $14,999
+        OMRE050:     Foreign born: With income: $15,000 to $24,999
+        OMRE051:     Foreign born: With income: $25,000 to $34,999
+        OMRE052:     Foreign born: With income: $35,000 to $49,999
+        OMRE053:     Foreign born: With income: $50,000 to $64,999
+        OMRE054:     Foreign born: With income: $65,000 to $74,999
+        OMRE055:     Foreign born: With income: $75,000 or more
+ 
+    Table 5:     Means of Transportation to Work
+    Universe:    Workers 16 years and over
+    Source code: C08301
+    NHGIS code:  ORW
+        ORWE001:     Total
+        ORWE002:     Car, truck, or van
+        ORWE003:     Car, truck, or van: Drove alone
+        ORWE004:     Car, truck, or van: Carpooled
+        ORWE005:     Car, truck, or van: Carpooled: In 2-person carpool
+        ORWE006:     Car, truck, or van: Carpooled: In 3-person carpool
+        ORWE007:     Car, truck, or van: Carpooled: In 4-or-more-person carpool
+        ORWE008:     Public transportation (excluding taxicab)
+        ORWE009:     Walked
+        ORWE010:     Taxicab, motorcycle, bicycle, or other means
+        ORWE011:     Worked at home
+ 
+    Table 6:     Travel Time to Work
+    Universe:    Workers 16 years and over who did not work at home
+    Source code: B08303
+    NHGIS code:  ORZ
+        ORZE001:     Total
+        ORZE002:     Less than 5 minutes
+        ORZE003:     5 to 9 minutes
+        ORZE004:     10 to 14 minutes
+        ORZE005:     15 to 19 minutes
+        ORZE006:     20 to 24 minutes
+        ORZE007:     25 to 29 minutes
+        ORZE008:     30 to 34 minutes
+        ORZE009:     35 to 39 minutes
+        ORZE010:     40 to 44 minutes
+        ORZE011:     45 to 59 minutes
+        ORZE012:     60 to 89 minutes
+        ORZE013:     90 or more minutes
+ 
+    Table 7:     Household Type by Household Size
+    Universe:    Households
+    Source code: B11016
+    NHGIS code:  OV2
+        OV2E001:     Total
+        OV2E002:     Family households
+        OV2E003:     Family households: 2-person household
+        OV2E004:     Family households: 3-person household
+        OV2E005:     Family households: 4-person household
+        OV2E006:     Family households: 5-person household
+        OV2E007:     Family households: 6-person household
+        OV2E008:     Family households: 7-or-more person household
+        OV2E009:     Nonfamily households
+        OV2E010:     Nonfamily households: 1-person household
+        OV2E011:     Nonfamily households: 2-person household
+        OV2E012:     Nonfamily households: 3-person household
+        OV2E013:     Nonfamily households: 4-person household
+        OV2E014:     Nonfamily households: 5-person household
+        OV2E015:     Nonfamily households: 6-person household
+        OV2E016:     Nonfamily households: 7-or-more person household
+ 
+    Table 8:     Educational Attainment for the Population 25 Years and Over
+    Universe:    Population 25 years and over
+    Source code: C15003
+    NHGIS code:  OY6
+        OY6E001:     Total
+        OY6E002:     No schooling completed
+        OY6E003:     Nursery to 4th grade
+        OY6E004:     5th and 6th grade
+        OY6E005:     7th and 8th grade
+        OY6E006:     9th grade
+        OY6E007:     10th grade
+        OY6E008:     11th grade
+        OY6E009:     12th grade, no diploma
+        OY6E010:     Regular high school diploma
+        OY6E011:     GED or alternative credential
+        OY6E012:     Some college, less than 1 year
+        OY6E013:     Some college, 1 or more years, no degree
+        OY6E014:     Associate's degree
+        OY6E015:     Bachelor's degree
+        OY6E016:     Master's degree
+        OY6E017:     Professional school degree
+        OY6E018:     Doctorate degree
+ 
+    Table 9:     Employment Status by Disability Status
+    Universe:    Civilian noninstitutionalized population 18 to 64 years
+    Source code: C18120
+    NHGIS code:  O3V
+        O3VE001:     Total
+        O3VE002:     In the labor force
+        O3VE003:     In the labor force: Employed
+        O3VE004:     In the labor force: Employed: With a disability
+        O3VE005:     In the labor force: Employed: No disability
+        O3VE006:     In the labor force: Unemployed
+        O3VE007:     In the labor force: Unemployed: With a disability
+        O3VE008:     In the labor force: Unemployed: No disability
+        O3VE009:     Not in labor force
+        O3VE010:     Not in labor force: With a disability
+        O3VE011:     Not in labor force: No disability
+ 
+    Table 10:    Household Income in the Past 12 Months (in 2012 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19001
+    NHGIS code:  O34
+        O34E001:     Total
+        O34E002:     Less than $10,000
+        O34E003:     $10,000 to $14,999
+        O34E004:     $15,000 to $19,999
+        O34E005:     $20,000 to $24,999
+        O34E006:     $25,000 to $29,999
+        O34E007:     $30,000 to $34,999
+        O34E008:     $35,000 to $39,999
+        O34E009:     $40,000 to $44,999
+        O34E010:     $45,000 to $49,999
+        O34E011:     $50,000 to $59,999
+        O34E012:     $60,000 to $74,999
+        O34E013:     $75,000 to $99,999
+        O34E014:     $100,000 to $124,999
+        O34E015:     $125,000 to $149,999
+        O34E016:     $150,000 to $199,999
+        O34E017:     $200,000 or more
+ 
+    Table 11:    Types of Health Insurance Coverage by Age
+    Universe:    Civilian noninstitutionalized population
+    Source code: C27010
+    NHGIS code:  PJY
+        PJYE001:     Total
+        PJYE002:     Under 18 years
+        PJYE003:     Under 18 years: With private health insurance only
+        PJYE004:     Under 18 years: With public coverage only
+        PJYE005:     Under 18 years: With both private and public coverage
+        PJYE006:     Under 18 years: No health insurance coverage
+        PJYE007:     18 to 34 years
+        PJYE008:     18 to 34 years: With private health insurance only
+        PJYE009:     18 to 34 years: With public coverage only
+        PJYE010:     18 to 34 years: With both private and public coverage
+        PJYE011:     18 to 34 years: No health insurance coverage
+        PJYE012:     35 to 64 years
+        PJYE013:     35 to 64 years: With private health insurance only
+        PJYE014:     35 to 64 years: With public coverage only
+        PJYE015:     35 to 64 years: With both private and public coverage
+        PJYE016:     35 to 64 years: No health insurance coverage
+        PJYE017:     65 years and over
+        PJYE018:     65 years and over: With private health insurance only
+        PJYE019:     65 years and over: With public coverage only
+        PJYE020:     65 years and over: With both private and public coverage
+        PJYE021:     65 years and over: No health insurance coverage
+ 
+Data Type (M):
+    Margins of error
+ 
+        NAME_M:      Area Name
+ 
+    Table 1:     Sex by Age
+    Universe:    Total population
+    Source code: B01001
+    NHGIS code:  OIL
+        OILM001:     Total
+        OILM002:     Male
+        OILM003:     Male: Under 5 years
+        OILM004:     Male: 5 to 9 years
+        OILM005:     Male: 10 to 14 years
+        OILM006:     Male: 15 to 17 years
+        OILM007:     Male: 18 and 19 years
+        OILM008:     Male: 20 years
+        OILM009:     Male: 21 years
+        OILM010:     Male: 22 to 24 years
+        OILM011:     Male: 25 to 29 years
+        OILM012:     Male: 30 to 34 years
+        OILM013:     Male: 35 to 39 years
+        OILM014:     Male: 40 to 44 years
+        OILM015:     Male: 45 to 49 years
+        OILM016:     Male: 50 to 54 years
+        OILM017:     Male: 55 to 59 years
+        OILM018:     Male: 60 and 61 years
+        OILM019:     Male: 62 to 64 years
+        OILM020:     Male: 65 and 66 years
+        OILM021:     Male: 67 to 69 years
+        OILM022:     Male: 70 to 74 years
+        OILM023:     Male: 75 to 79 years
+        OILM024:     Male: 80 to 84 years
+        OILM025:     Male: 85 years and over
+        OILM026:     Female
+        OILM027:     Female: Under 5 years
+        OILM028:     Female: 5 to 9 years
+        OILM029:     Female: 10 to 14 years
+        OILM030:     Female: 15 to 17 years
+        OILM031:     Female: 18 and 19 years
+        OILM032:     Female: 20 years
+        OILM033:     Female: 21 years
+        OILM034:     Female: 22 to 24 years
+        OILM035:     Female: 25 to 29 years
+        OILM036:     Female: 30 to 34 years
+        OILM037:     Female: 35 to 39 years
+        OILM038:     Female: 40 to 44 years
+        OILM039:     Female: 45 to 49 years
+        OILM040:     Female: 50 to 54 years
+        OILM041:     Female: 55 to 59 years
+        OILM042:     Female: 60 and 61 years
+        OILM043:     Female: 62 to 64 years
+        OILM044:     Female: 65 and 66 years
+        OILM045:     Female: 67 to 69 years
+        OILM046:     Female: 70 to 74 years
+        OILM047:     Female: 75 to 79 years
+        OILM048:     Female: 80 to 84 years
+        OILM049:     Female: 85 years and over
+ 
+    Table 2:     Total Population
+    Universe:    Total population
+    Source code: B01003
+    NHGIS code:  OJE
+        OJEM001:     Total
+ 
+    Table 3:     Race
+    Universe:    Total population
+    Source code: B02001
+    NHGIS code:  OJF
+        OJFM001:     Total
+        OJFM002:     White alone
+        OJFM003:     Black or African American alone
+        OJFM004:     American Indian and Alaska Native alone
+        OJFM005:     Asian alone
+        OJFM006:     Native Hawaiian and Other Pacific Islander alone
+        OJFM007:     Some other race alone
+        OJFM008:     Two or more races
+        OJFM009:     Two or more races: Two races including Some other race
+        OJFM010:     Two or more races: Two races excluding Some other race, and three or more races
+ 
+    Table 4:     Place of Birth by Individual Income in the Past 12 Months (in 2012 Inflation-Adjusted Dollars) in the United States
+    Universe:    Population 15 years and over in the United States
+    Source code: B06010
+    NHGIS code:  OMR
+        OMRM001:     Total
+        OMRM002:     No income
+        OMRM003:     With income
+        OMRM004:     With income: $1 to $9,999 or loss
+        OMRM005:     With income: $10,000 to $14,999
+        OMRM006:     With income: $15,000 to $24,999
+        OMRM007:     With income: $25,000 to $34,999
+        OMRM008:     With income: $35,000 to $49,999
+        OMRM009:     With income: $50,000 to $64,999
+        OMRM010:     With income: $65,000 to $74,999
+        OMRM011:     With income: $75,000 or more
+        OMRM012:     Born in state of residence
+        OMRM013:     Born in state of residence: No income
+        OMRM014:     Born in state of residence: With income
+        OMRM015:     Born in state of residence: With income: $1 to $9,999 or loss
+        OMRM016:     Born in state of residence: With income: $10,000 to $14,999
+        OMRM017:     Born in state of residence: With income: $15,000 to $24,999
+        OMRM018:     Born in state of residence: With income: $25,000 to $34,999
+        OMRM019:     Born in state of residence: With income: $35,000 to $49,999
+        OMRM020:     Born in state of residence: With income: $50,000 to $64,999
+        OMRM021:     Born in state of residence: With income: $65,000 to $74,999
+        OMRM022:     Born in state of residence: With income: $75,000 or more
+        OMRM023:     Born in other state in the United States
+        OMRM024:     Born in other state in the United States: No income
+        OMRM025:     Born in other state in the United States: With income
+        OMRM026:     Born in other state in the United States: With income: $1 to $9,999 or loss
+        OMRM027:     Born in other state in the United States: With income: $10,000 to $14,999
+        OMRM028:     Born in other state in the United States: With income: $15,000 to $24,999
+        OMRM029:     Born in other state in the United States: With income: $25,000 to $34,999
+        OMRM030:     Born in other state in the United States: With income: $35,000 to $49,999
+        OMRM031:     Born in other state in the United States: With income: $50,000 to $64,999
+        OMRM032:     Born in other state in the United States: With income: $65,000 to $74,999
+        OMRM033:     Born in other state in the United States: With income: $75,000 or more
+        OMRM034:     Native; born outside the United States
+        OMRM035:     Native; born outside the United States: No income
+        OMRM036:     Native; born outside the United States: With income
+        OMRM037:     Native; born outside the United States: With income: $1 to $9,999 or loss
+        OMRM038:     Native; born outside the United States: With income: $10,000 to $14,999
+        OMRM039:     Native; born outside the United States: With income: $15,000 to $24,999
+        OMRM040:     Native; born outside the United States: With income: $25,000 to $34,999
+        OMRM041:     Native; born outside the United States: With income: $35,000 to $49,999
+        OMRM042:     Native; born outside the United States: With income: $50,000 to $64,999
+        OMRM043:     Native; born outside the United States: With income: $65,000 to $74,999
+        OMRM044:     Native; born outside the United States: With income: $75,000 or more
+        OMRM045:     Foreign born
+        OMRM046:     Foreign born: No income
+        OMRM047:     Foreign born: With income
+        OMRM048:     Foreign born: With income: $1 to $9,999 or loss
+        OMRM049:     Foreign born: With income: $10,000 to $14,999
+        OMRM050:     Foreign born: With income: $15,000 to $24,999
+        OMRM051:     Foreign born: With income: $25,000 to $34,999
+        OMRM052:     Foreign born: With income: $35,000 to $49,999
+        OMRM053:     Foreign born: With income: $50,000 to $64,999
+        OMRM054:     Foreign born: With income: $65,000 to $74,999
+        OMRM055:     Foreign born: With income: $75,000 or more
+ 
+    Table 5:     Means of Transportation to Work
+    Universe:    Workers 16 years and over
+    Source code: C08301
+    NHGIS code:  ORW
+        ORWM001:     Total
+        ORWM002:     Car, truck, or van
+        ORWM003:     Car, truck, or van: Drove alone
+        ORWM004:     Car, truck, or van: Carpooled
+        ORWM005:     Car, truck, or van: Carpooled: In 2-person carpool
+        ORWM006:     Car, truck, or van: Carpooled: In 3-person carpool
+        ORWM007:     Car, truck, or van: Carpooled: In 4-or-more-person carpool
+        ORWM008:     Public transportation (excluding taxicab)
+        ORWM009:     Walked
+        ORWM010:     Taxicab, motorcycle, bicycle, or other means
+        ORWM011:     Worked at home
+ 
+    Table 6:     Travel Time to Work
+    Universe:    Workers 16 years and over who did not work at home
+    Source code: B08303
+    NHGIS code:  ORZ
+        ORZM001:     Total
+        ORZM002:     Less than 5 minutes
+        ORZM003:     5 to 9 minutes
+        ORZM004:     10 to 14 minutes
+        ORZM005:     15 to 19 minutes
+        ORZM006:     20 to 24 minutes
+        ORZM007:     25 to 29 minutes
+        ORZM008:     30 to 34 minutes
+        ORZM009:     35 to 39 minutes
+        ORZM010:     40 to 44 minutes
+        ORZM011:     45 to 59 minutes
+        ORZM012:     60 to 89 minutes
+        ORZM013:     90 or more minutes
+ 
+    Table 7:     Household Type by Household Size
+    Universe:    Households
+    Source code: B11016
+    NHGIS code:  OV2
+        OV2M001:     Total
+        OV2M002:     Family households
+        OV2M003:     Family households: 2-person household
+        OV2M004:     Family households: 3-person household
+        OV2M005:     Family households: 4-person household
+        OV2M006:     Family households: 5-person household
+        OV2M007:     Family households: 6-person household
+        OV2M008:     Family households: 7-or-more person household
+        OV2M009:     Nonfamily households
+        OV2M010:     Nonfamily households: 1-person household
+        OV2M011:     Nonfamily households: 2-person household
+        OV2M012:     Nonfamily households: 3-person household
+        OV2M013:     Nonfamily households: 4-person household
+        OV2M014:     Nonfamily households: 5-person household
+        OV2M015:     Nonfamily households: 6-person household
+        OV2M016:     Nonfamily households: 7-or-more person household
+ 
+    Table 8:     Educational Attainment for the Population 25 Years and Over
+    Universe:    Population 25 years and over
+    Source code: C15003
+    NHGIS code:  OY6
+        OY6M001:     Total
+        OY6M002:     No schooling completed
+        OY6M003:     Nursery to 4th grade
+        OY6M004:     5th and 6th grade
+        OY6M005:     7th and 8th grade
+        OY6M006:     9th grade
+        OY6M007:     10th grade
+        OY6M008:     11th grade
+        OY6M009:     12th grade, no diploma
+        OY6M010:     Regular high school diploma
+        OY6M011:     GED or alternative credential
+        OY6M012:     Some college, less than 1 year
+        OY6M013:     Some college, 1 or more years, no degree
+        OY6M014:     Associate's degree
+        OY6M015:     Bachelor's degree
+        OY6M016:     Master's degree
+        OY6M017:     Professional school degree
+        OY6M018:     Doctorate degree
+ 
+    Table 9:     Employment Status by Disability Status
+    Universe:    Civilian noninstitutionalized population 18 to 64 years
+    Source code: C18120
+    NHGIS code:  O3V
+        O3VM001:     Total
+        O3VM002:     In the labor force
+        O3VM003:     In the labor force: Employed
+        O3VM004:     In the labor force: Employed: With a disability
+        O3VM005:     In the labor force: Employed: No disability
+        O3VM006:     In the labor force: Unemployed
+        O3VM007:     In the labor force: Unemployed: With a disability
+        O3VM008:     In the labor force: Unemployed: No disability
+        O3VM009:     Not in labor force
+        O3VM010:     Not in labor force: With a disability
+        O3VM011:     Not in labor force: No disability
+ 
+    Table 10:    Household Income in the Past 12 Months (in 2012 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19001
+    NHGIS code:  O34
+        O34M001:     Total
+        O34M002:     Less than $10,000
+        O34M003:     $10,000 to $14,999
+        O34M004:     $15,000 to $19,999
+        O34M005:     $20,000 to $24,999
+        O34M006:     $25,000 to $29,999
+        O34M007:     $30,000 to $34,999
+        O34M008:     $35,000 to $39,999
+        O34M009:     $40,000 to $44,999
+        O34M010:     $45,000 to $49,999
+        O34M011:     $50,000 to $59,999
+        O34M012:     $60,000 to $74,999
+        O34M013:     $75,000 to $99,999
+        O34M014:     $100,000 to $124,999
+        O34M015:     $125,000 to $149,999
+        O34M016:     $150,000 to $199,999
+        O34M017:     $200,000 or more
+ 
+    Table 11:    Types of Health Insurance Coverage by Age
+    Universe:    Civilian noninstitutionalized population
+    Source code: C27010
+    NHGIS code:  PJY
+        PJYM001:     Total
+        PJYM002:     Under 18 years
+        PJYM003:     Under 18 years: With private health insurance only
+        PJYM004:     Under 18 years: With public coverage only
+        PJYM005:     Under 18 years: With both private and public coverage
+        PJYM006:     Under 18 years: No health insurance coverage
+        PJYM007:     18 to 34 years
+        PJYM008:     18 to 34 years: With private health insurance only
+        PJYM009:     18 to 34 years: With public coverage only
+        PJYM010:     18 to 34 years: With both private and public coverage
+        PJYM011:     18 to 34 years: No health insurance coverage
+        PJYM012:     35 to 64 years
+        PJYM013:     35 to 64 years: With private health insurance only
+        PJYM014:     35 to 64 years: With public coverage only
+        PJYM015:     35 to 64 years: With both private and public coverage
+        PJYM016:     35 to 64 years: No health insurance coverage
+        PJYM017:     65 years and over
+        PJYM018:     65 years and over: With private health insurance only
+        PJYM019:     65 years and over: With public coverage only
+        PJYM020:     65 years and over: With both private and public coverage
+        PJYM021:     65 years and over: No health insurance coverage
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+  data related to a particular publication. Contact us for permission for any other 
+  redistribution; we will consider requests for free and commercial redistribution.
+
+* CITATION: You will cite NHGIS appropriately.
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+      should include the following citation:
+
+        Steven Manson, Jonathan Schroeder, David Van Riper, and Steven Ruggles. 
+        IPUMS National Historical Geographic Information System: Version 13.0 
+        [Database]. Minneapolis: University of Minnesota. 2018. 
+        http://doi.org/10.18128/D050.V13.0
+
+    * Publications and research reports employing school attendance areas data 
+      (either tabular or GIS) must cite it appropriately. The citation should 
+      include the following:
+
+        The College of William and Mary and the Minnesota Population Center.
+        School Attendance Boundary Information System (SABINS): Version 1.0.
+        Minneapolis, MN: University of Minnesota 2011.
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+      recommend that you cite the use of NHGIS data as follows:
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+    * If possible, citations involving school attendance areas should also include
+      the URL for the SABINS site:
+
+        http://www.sabinsdata.org/.
+
+These terms of use are a legally binding agreement. You can use the data only in 
+accordance with these terms, and any other use is a violation of the agreement. 
+Violations may result in revocation of the agreement and prohibition from using other 
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+responsible for all damages, including reasonable attorney's fees and expenses.
+        
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+
+Send electronic material to: nhgis@umn.edu
+
+Printed matter should be sent to:
+
+    IPUMS NHGIS
+    Institute for Social Research and Data Innovation
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455

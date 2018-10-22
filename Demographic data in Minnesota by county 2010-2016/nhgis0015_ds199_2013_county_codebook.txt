@@ -1,0 +1,737 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'nhgis0015_ds199_2013_county'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             2013
+Geographic level: County (by State)
+Dataset:          2013 American Community Survey: 1-Year Data
+   NHGIS code:    2013_ACS1
+   NHGIS ID:      ds199
+Breakdown(s):     Geographic Subarea:
+                     Total area (00)
+Data type(s):     (E) Estimates
+                  (M) Margins of error
+ 
+Tables:
+ 
+1. Sex by Age
+   Universe:    Total population
+   Source code: B01001
+   NHGIS code:  SAS
+ 
+2. Total Population
+   Universe:    Total population
+   Source code: B01003
+   NHGIS code:  SBL
+ 
+3. Race
+   Universe:    Total population
+   Source code: B02001
+   NHGIS code:  SBM
+ 
+4. Place of Birth by Individual Income in the Past 12 Months (in 2013 Inflation-Adjusted Dollars) in the United States
+   Universe:    Population 15 years and over in the United States
+   Source code: B06010
+   NHGIS code:  SEN
+ 
+5. Means of Transportation to Work
+   Universe:    Workers 16 years and over
+   Source code: C08301
+   NHGIS code:  SJS
+ 
+6. Travel Time to Work
+   Universe:    Workers 16 years and over who did not work at home
+   Source code: B08303
+   NHGIS code:  SJV
+ 
+7. Household Type by Household Size
+   Universe:    Households
+   Source code: B11016
+   NHGIS code:  SNG
+ 
+8. Educational Attainment for the Population 25 Years and Over
+   Universe:    Population 25 years and over
+   Source code: C15003
+   NHGIS code:  SP8
+ 
+9. Employment Status by Disability Status
+   Universe:    Civilian noninstitutionalized population 18 to 64 years
+   Source code: C18120
+   NHGIS code:  SUP
+ 
+10. Household Income in the Past 12 Months (in 2013 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19001
+    NHGIS code:  SUY
+ 
+11. Types of Health Insurance Coverage by Age
+    Universe:    Civilian noninstitutionalized population
+    Source code: C27010
+    NHGIS code:  S8Q
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        REGIONA:     Region Code
+        DIVISIONA:   Division Code
+        STATE:       State Name
+        STATEA:      State Code
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        COUSUBA:     County Subdivision Code
+        PLACEA:      Place Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        ANRCA:       Alaska Native Regional Corporation Code
+        CBSAA:       Metropolitan Statistical Area/Micropolitan Statistical Area Code
+        CSAA:        Combined Statistical Area Code
+        METDIVA:     Metropolitan Division Code
+        NECTAA:      New England City and Town Area Code
+        CNECTAA:     Combined New England City and Town Area Code
+        NECTADIVA:   New England City and Town Area Division Code
+        UAA:         Urban Area Code
+        CDCURRA:     Congressional District (2013-2015, 113th Congress) Code
+        SDELMA:      School District (Elementary)/Remainder Code
+        SDSECA:      School District (Secondary)/Remainder Code
+        SDUNIA:      School District (Unified)/Remainder Code
+        PUMA5A:      Public Use Microdata Sample Area (PUMA) Code
+ 
+Data Type (E):
+    Estimates
+ 
+        NAME_E:      Area Name
+ 
+    Table 1:     Sex by Age
+    Universe:    Total population
+    Source code: B01001
+    NHGIS code:  SAS
+        SASE001:     Total
+        SASE002:     Male
+        SASE003:     Male: Under 5 years
+        SASE004:     Male: 5 to 9 years
+        SASE005:     Male: 10 to 14 years
+        SASE006:     Male: 15 to 17 years
+        SASE007:     Male: 18 and 19 years
+        SASE008:     Male: 20 years
+        SASE009:     Male: 21 years
+        SASE010:     Male: 22 to 24 years
+        SASE011:     Male: 25 to 29 years
+        SASE012:     Male: 30 to 34 years
+        SASE013:     Male: 35 to 39 years
+        SASE014:     Male: 40 to 44 years
+        SASE015:     Male: 45 to 49 years
+        SASE016:     Male: 50 to 54 years
+        SASE017:     Male: 55 to 59 years
+        SASE018:     Male: 60 and 61 years
+        SASE019:     Male: 62 to 64 years
+        SASE020:     Male: 65 and 66 years
+        SASE021:     Male: 67 to 69 years
+        SASE022:     Male: 70 to 74 years
+        SASE023:     Male: 75 to 79 years
+        SASE024:     Male: 80 to 84 years
+        SASE025:     Male: 85 years and over
+        SASE026:     Female
+        SASE027:     Female: Under 5 years
+        SASE028:     Female: 5 to 9 years
+        SASE029:     Female: 10 to 14 years
+        SASE030:     Female: 15 to 17 years
+        SASE031:     Female: 18 and 19 years
+        SASE032:     Female: 20 years
+        SASE033:     Female: 21 years
+        SASE034:     Female: 22 to 24 years
+        SASE035:     Female: 25 to 29 years
+        SASE036:     Female: 30 to 34 years
+        SASE037:     Female: 35 to 39 years
+        SASE038:     Female: 40 to 44 years
+        SASE039:     Female: 45 to 49 years
+        SASE040:     Female: 50 to 54 years
+        SASE041:     Female: 55 to 59 years
+        SASE042:     Female: 60 and 61 years
+        SASE043:     Female: 62 to 64 years
+        SASE044:     Female: 65 and 66 years
+        SASE045:     Female: 67 to 69 years
+        SASE046:     Female: 70 to 74 years
+        SASE047:     Female: 75 to 79 years
+        SASE048:     Female: 80 to 84 years
+        SASE049:     Female: 85 years and over
+ 
+    Table 2:     Total Population
+    Universe:    Total population
+    Source code: B01003
+    NHGIS code:  SBL
+        SBLE001:     Total
+ 
+    Table 3:     Race
+    Universe:    Total population
+    Source code: B02001
+    NHGIS code:  SBM
+        SBME001:     Total
+        SBME002:     White alone
+        SBME003:     Black or African American alone
+        SBME004:     American Indian and Alaska Native alone
+        SBME005:     Asian alone
+        SBME006:     Native Hawaiian and Other Pacific Islander alone
+        SBME007:     Some other race alone
+        SBME008:     Two or more races
+        SBME009:     Two or more races: Two races including Some other race
+        SBME010:     Two or more races: Two races excluding Some other race, and three or more races
+ 
+    Table 4:     Place of Birth by Individual Income in the Past 12 Months (in 2013 Inflation-Adjusted Dollars) in the United States
+    Universe:    Population 15 years and over in the United States
+    Source code: B06010
+    NHGIS code:  SEN
+        SENE001:     Total
+        SENE002:     No income
+        SENE003:     With income
+        SENE004:     With income: $1 to $9,999 or loss
+        SENE005:     With income: $10,000 to $14,999
+        SENE006:     With income: $15,000 to $24,999
+        SENE007:     With income: $25,000 to $34,999
+        SENE008:     With income: $35,000 to $49,999
+        SENE009:     With income: $50,000 to $64,999
+        SENE010:     With income: $65,000 to $74,999
+        SENE011:     With income: $75,000 or more
+        SENE012:     Born in state of residence
+        SENE013:     Born in state of residence: No income
+        SENE014:     Born in state of residence: With income
+        SENE015:     Born in state of residence: With income: $1 to $9,999 or loss
+        SENE016:     Born in state of residence: With income: $10,000 to $14,999
+        SENE017:     Born in state of residence: With income: $15,000 to $24,999
+        SENE018:     Born in state of residence: With income: $25,000 to $34,999
+        SENE019:     Born in state of residence: With income: $35,000 to $49,999
+        SENE020:     Born in state of residence: With income: $50,000 to $64,999
+        SENE021:     Born in state of residence: With income: $65,000 to $74,999
+        SENE022:     Born in state of residence: With income: $75,000 or more
+        SENE023:     Born in other state in the United States
+        SENE024:     Born in other state in the United States: No income
+        SENE025:     Born in other state in the United States: With income
+        SENE026:     Born in other state in the United States: With income: $1 to $9,999 or loss
+        SENE027:     Born in other state in the United States: With income: $10,000 to $14,999
+        SENE028:     Born in other state in the United States: With income: $15,000 to $24,999
+        SENE029:     Born in other state in the United States: With income: $25,000 to $34,999
+        SENE030:     Born in other state in the United States: With income: $35,000 to $49,999
+        SENE031:     Born in other state in the United States: With income: $50,000 to $64,999
+        SENE032:     Born in other state in the United States: With income: $65,000 to $74,999
+        SENE033:     Born in other state in the United States: With income: $75,000 or more
+        SENE034:     Native; born outside the United States
+        SENE035:     Native; born outside the United States: No income
+        SENE036:     Native; born outside the United States: With income
+        SENE037:     Native; born outside the United States: With income: $1 to $9,999 or loss
+        SENE038:     Native; born outside the United States: With income: $10,000 to $14,999
+        SENE039:     Native; born outside the United States: With income: $15,000 to $24,999
+        SENE040:     Native; born outside the United States: With income: $25,000 to $34,999
+        SENE041:     Native; born outside the United States: With income: $35,000 to $49,999
+        SENE042:     Native; born outside the United States: With income: $50,000 to $64,999
+        SENE043:     Native; born outside the United States: With income: $65,000 to $74,999
+        SENE044:     Native; born outside the United States: With income: $75,000 or more
+        SENE045:     Foreign born
+        SENE046:     Foreign born: No income
+        SENE047:     Foreign born: With income
+        SENE048:     Foreign born: With income: $1 to $9,999 or loss
+        SENE049:     Foreign born: With income: $10,000 to $14,999
+        SENE050:     Foreign born: With income: $15,000 to $24,999
+        SENE051:     Foreign born: With income: $25,000 to $34,999
+        SENE052:     Foreign born: With income: $35,000 to $49,999
+        SENE053:     Foreign born: With income: $50,000 to $64,999
+        SENE054:     Foreign born: With income: $65,000 to $74,999
+        SENE055:     Foreign born: With income: $75,000 or more
+ 
+    Table 5:     Means of Transportation to Work
+    Universe:    Workers 16 years and over
+    Source code: C08301
+    NHGIS code:  SJS
+        SJSE001:     Total
+        SJSE002:     Car, truck, or van
+        SJSE003:     Car, truck, or van: Drove alone
+        SJSE004:     Car, truck, or van: Carpooled
+        SJSE005:     Car, truck, or van: Carpooled: In 2-person carpool
+        SJSE006:     Car, truck, or van: Carpooled: In 3-person carpool
+        SJSE007:     Car, truck, or van: Carpooled: In 4-or-more-person carpool
+        SJSE008:     Public transportation (excluding taxicab)
+        SJSE009:     Walked
+        SJSE010:     Taxicab, motorcycle, bicycle, or other means
+        SJSE011:     Worked at home
+ 
+    Table 6:     Travel Time to Work
+    Universe:    Workers 16 years and over who did not work at home
+    Source code: B08303
+    NHGIS code:  SJV
+        SJVE001:     Total
+        SJVE002:     Less than 5 minutes
+        SJVE003:     5 to 9 minutes
+        SJVE004:     10 to 14 minutes
+        SJVE005:     15 to 19 minutes
+        SJVE006:     20 to 24 minutes
+        SJVE007:     25 to 29 minutes
+        SJVE008:     30 to 34 minutes
+        SJVE009:     35 to 39 minutes
+        SJVE010:     40 to 44 minutes
+        SJVE011:     45 to 59 minutes
+        SJVE012:     60 to 89 minutes
+        SJVE013:     90 or more minutes
+ 
+    Table 7:     Household Type by Household Size
+    Universe:    Households
+    Source code: B11016
+    NHGIS code:  SNG
+        SNGE001:     Total
+        SNGE002:     Family households
+        SNGE003:     Family households: 2-person household
+        SNGE004:     Family households: 3-person household
+        SNGE005:     Family households: 4-person household
+        SNGE006:     Family households: 5-person household
+        SNGE007:     Family households: 6-person household
+        SNGE008:     Family households: 7-or-more person household
+        SNGE009:     Nonfamily households
+        SNGE010:     Nonfamily households: 1-person household
+        SNGE011:     Nonfamily households: 2-person household
+        SNGE012:     Nonfamily households: 3-person household
+        SNGE013:     Nonfamily households: 4-person household
+        SNGE014:     Nonfamily households: 5-person household
+        SNGE015:     Nonfamily households: 6-person household
+        SNGE016:     Nonfamily households: 7-or-more person household
+ 
+    Table 8:     Educational Attainment for the Population 25 Years and Over
+    Universe:    Population 25 years and over
+    Source code: C15003
+    NHGIS code:  SP8
+        SP8E001:     Total
+        SP8E002:     No schooling completed
+        SP8E003:     Nursery to 4th grade
+        SP8E004:     5th and 6th grade
+        SP8E005:     7th and 8th grade
+        SP8E006:     9th grade
+        SP8E007:     10th grade
+        SP8E008:     11th grade
+        SP8E009:     12th grade, no diploma
+        SP8E010:     Regular high school diploma
+        SP8E011:     GED or alternative credential
+        SP8E012:     Some college, less than 1 year
+        SP8E013:     Some college, 1 or more years, no degree
+        SP8E014:     Associate's degree
+        SP8E015:     Bachelor's degree
+        SP8E016:     Master's degree
+        SP8E017:     Professional school degree
+        SP8E018:     Doctorate degree
+ 
+    Table 9:     Employment Status by Disability Status
+    Universe:    Civilian noninstitutionalized population 18 to 64 years
+    Source code: C18120
+    NHGIS code:  SUP
+        SUPE001:     Total
+        SUPE002:     In the labor force
+        SUPE003:     In the labor force: Employed
+        SUPE004:     In the labor force: Employed: With a disability
+        SUPE005:     In the labor force: Employed: No disability
+        SUPE006:     In the labor force: Unemployed
+        SUPE007:     In the labor force: Unemployed: With a disability
+        SUPE008:     In the labor force: Unemployed: No disability
+        SUPE009:     Not in labor force
+        SUPE010:     Not in labor force: With a disability
+        SUPE011:     Not in labor force: No disability
+ 
+    Table 10:    Household Income in the Past 12 Months (in 2013 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19001
+    NHGIS code:  SUY
+        SUYE001:     Total
+        SUYE002:     Less than $10,000
+        SUYE003:     $10,000 to $14,999
+        SUYE004:     $15,000 to $19,999
+        SUYE005:     $20,000 to $24,999
+        SUYE006:     $25,000 to $29,999
+        SUYE007:     $30,000 to $34,999
+        SUYE008:     $35,000 to $39,999
+        SUYE009:     $40,000 to $44,999
+        SUYE010:     $45,000 to $49,999
+        SUYE011:     $50,000 to $59,999
+        SUYE012:     $60,000 to $74,999
+        SUYE013:     $75,000 to $99,999
+        SUYE014:     $100,000 to $124,999
+        SUYE015:     $125,000 to $149,999
+        SUYE016:     $150,000 to $199,999
+        SUYE017:     $200,000 or more
+ 
+    Table 11:    Types of Health Insurance Coverage by Age
+    Universe:    Civilian noninstitutionalized population
+    Source code: C27010
+    NHGIS code:  S8Q
+        S8QE001:     Total
+        S8QE002:     Under 18 years
+        S8QE003:     Under 18 years: With private health insurance only
+        S8QE004:     Under 18 years: With public coverage only
+        S8QE005:     Under 18 years: With both private and public coverage
+        S8QE006:     Under 18 years: No health insurance coverage
+        S8QE007:     18 to 34 years
+        S8QE008:     18 to 34 years: With private health insurance only
+        S8QE009:     18 to 34 years: With public coverage only
+        S8QE010:     18 to 34 years: With both private and public coverage
+        S8QE011:     18 to 34 years: No health insurance coverage
+        S8QE012:     35 to 64 years
+        S8QE013:     35 to 64 years: With private health insurance only
+        S8QE014:     35 to 64 years: With public coverage only
+        S8QE015:     35 to 64 years: With both private and public coverage
+        S8QE016:     35 to 64 years: No health insurance coverage
+        S8QE017:     65 years and over
+        S8QE018:     65 years and over: With private health insurance only
+        S8QE019:     65 years and over: With public coverage only
+        S8QE020:     65 years and over: With both private and public coverage
+        S8QE021:     65 years and over: No health insurance coverage
+ 
+Data Type (M):
+    Margins of error
+ 
+        NAME_M:      Area Name
+ 
+    Table 1:     Sex by Age
+    Universe:    Total population
+    Source code: B01001
+    NHGIS code:  SAS
+        SASM001:     Total
+        SASM002:     Male
+        SASM003:     Male: Under 5 years
+        SASM004:     Male: 5 to 9 years
+        SASM005:     Male: 10 to 14 years
+        SASM006:     Male: 15 to 17 years
+        SASM007:     Male: 18 and 19 years
+        SASM008:     Male: 20 years
+        SASM009:     Male: 21 years
+        SASM010:     Male: 22 to 24 years
+        SASM011:     Male: 25 to 29 years
+        SASM012:     Male: 30 to 34 years
+        SASM013:     Male: 35 to 39 years
+        SASM014:     Male: 40 to 44 years
+        SASM015:     Male: 45 to 49 years
+        SASM016:     Male: 50 to 54 years
+        SASM017:     Male: 55 to 59 years
+        SASM018:     Male: 60 and 61 years
+        SASM019:     Male: 62 to 64 years
+        SASM020:     Male: 65 and 66 years
+        SASM021:     Male: 67 to 69 years
+        SASM022:     Male: 70 to 74 years
+        SASM023:     Male: 75 to 79 years
+        SASM024:     Male: 80 to 84 years
+        SASM025:     Male: 85 years and over
+        SASM026:     Female
+        SASM027:     Female: Under 5 years
+        SASM028:     Female: 5 to 9 years
+        SASM029:     Female: 10 to 14 years
+        SASM030:     Female: 15 to 17 years
+        SASM031:     Female: 18 and 19 years
+        SASM032:     Female: 20 years
+        SASM033:     Female: 21 years
+        SASM034:     Female: 22 to 24 years
+        SASM035:     Female: 25 to 29 years
+        SASM036:     Female: 30 to 34 years
+        SASM037:     Female: 35 to 39 years
+        SASM038:     Female: 40 to 44 years
+        SASM039:     Female: 45 to 49 years
+        SASM040:     Female: 50 to 54 years
+        SASM041:     Female: 55 to 59 years
+        SASM042:     Female: 60 and 61 years
+        SASM043:     Female: 62 to 64 years
+        SASM044:     Female: 65 and 66 years
+        SASM045:     Female: 67 to 69 years
+        SASM046:     Female: 70 to 74 years
+        SASM047:     Female: 75 to 79 years
+        SASM048:     Female: 80 to 84 years
+        SASM049:     Female: 85 years and over
+ 
+    Table 2:     Total Population
+    Universe:    Total population
+    Source code: B01003
+    NHGIS code:  SBL
+        SBLM001:     Total
+ 
+    Table 3:     Race
+    Universe:    Total population
+    Source code: B02001
+    NHGIS code:  SBM
+        SBMM001:     Total
+        SBMM002:     White alone
+        SBMM003:     Black or African American alone
+        SBMM004:     American Indian and Alaska Native alone
+        SBMM005:     Asian alone
+        SBMM006:     Native Hawaiian and Other Pacific Islander alone
+        SBMM007:     Some other race alone
+        SBMM008:     Two or more races
+        SBMM009:     Two or more races: Two races including Some other race
+        SBMM010:     Two or more races: Two races excluding Some other race, and three or more races
+ 
+    Table 4:     Place of Birth by Individual Income in the Past 12 Months (in 2013 Inflation-Adjusted Dollars) in the United States
+    Universe:    Population 15 years and over in the United States
+    Source code: B06010
+    NHGIS code:  SEN
+        SENM001:     Total
+        SENM002:     No income
+        SENM003:     With income
+        SENM004:     With income: $1 to $9,999 or loss
+        SENM005:     With income: $10,000 to $14,999
+        SENM006:     With income: $15,000 to $24,999
+        SENM007:     With income: $25,000 to $34,999
+        SENM008:     With income: $35,000 to $49,999
+        SENM009:     With income: $50,000 to $64,999
+        SENM010:     With income: $65,000 to $74,999
+        SENM011:     With income: $75,000 or more
+        SENM012:     Born in state of residence
+        SENM013:     Born in state of residence: No income
+        SENM014:     Born in state of residence: With income
+        SENM015:     Born in state of residence: With income: $1 to $9,999 or loss
+        SENM016:     Born in state of residence: With income: $10,000 to $14,999
+        SENM017:     Born in state of residence: With income: $15,000 to $24,999
+        SENM018:     Born in state of residence: With income: $25,000 to $34,999
+        SENM019:     Born in state of residence: With income: $35,000 to $49,999
+        SENM020:     Born in state of residence: With income: $50,000 to $64,999
+        SENM021:     Born in state of residence: With income: $65,000 to $74,999
+        SENM022:     Born in state of residence: With income: $75,000 or more
+        SENM023:     Born in other state in the United States
+        SENM024:     Born in other state in the United States: No income
+        SENM025:     Born in other state in the United States: With income
+        SENM026:     Born in other state in the United States: With income: $1 to $9,999 or loss
+        SENM027:     Born in other state in the United States: With income: $10,000 to $14,999
+        SENM028:     Born in other state in the United States: With income: $15,000 to $24,999
+        SENM029:     Born in other state in the United States: With income: $25,000 to $34,999
+        SENM030:     Born in other state in the United States: With income: $35,000 to $49,999
+        SENM031:     Born in other state in the United States: With income: $50,000 to $64,999
+        SENM032:     Born in other state in the United States: With income: $65,000 to $74,999
+        SENM033:     Born in other state in the United States: With income: $75,000 or more
+        SENM034:     Native; born outside the United States
+        SENM035:     Native; born outside the United States: No income
+        SENM036:     Native; born outside the United States: With income
+        SENM037:     Native; born outside the United States: With income: $1 to $9,999 or loss
+        SENM038:     Native; born outside the United States: With income: $10,000 to $14,999
+        SENM039:     Native; born outside the United States: With income: $15,000 to $24,999
+        SENM040:     Native; born outside the United States: With income: $25,000 to $34,999
+        SENM041:     Native; born outside the United States: With income: $35,000 to $49,999
+        SENM042:     Native; born outside the United States: With income: $50,000 to $64,999
+        SENM043:     Native; born outside the United States: With income: $65,000 to $74,999
+        SENM044:     Native; born outside the United States: With income: $75,000 or more
+        SENM045:     Foreign born
+        SENM046:     Foreign born: No income
+        SENM047:     Foreign born: With income
+        SENM048:     Foreign born: With income: $1 to $9,999 or loss
+        SENM049:     Foreign born: With income: $10,000 to $14,999
+        SENM050:     Foreign born: With income: $15,000 to $24,999
+        SENM051:     Foreign born: With income: $25,000 to $34,999
+        SENM052:     Foreign born: With income: $35,000 to $49,999
+        SENM053:     Foreign born: With income: $50,000 to $64,999
+        SENM054:     Foreign born: With income: $65,000 to $74,999
+        SENM055:     Foreign born: With income: $75,000 or more
+ 
+    Table 5:     Means of Transportation to Work
+    Universe:    Workers 16 years and over
+    Source code: C08301
+    NHGIS code:  SJS
+        SJSM001:     Total
+        SJSM002:     Car, truck, or van
+        SJSM003:     Car, truck, or van: Drove alone
+        SJSM004:     Car, truck, or van: Carpooled
+        SJSM005:     Car, truck, or van: Carpooled: In 2-person carpool
+        SJSM006:     Car, truck, or van: Carpooled: In 3-person carpool
+        SJSM007:     Car, truck, or van: Carpooled: In 4-or-more-person carpool
+        SJSM008:     Public transportation (excluding taxicab)
+        SJSM009:     Walked
+        SJSM010:     Taxicab, motorcycle, bicycle, or other means
+        SJSM011:     Worked at home
+ 
+    Table 6:     Travel Time to Work
+    Universe:    Workers 16 years and over who did not work at home
+    Source code: B08303
+    NHGIS code:  SJV
+        SJVM001:     Total
+        SJVM002:     Less than 5 minutes
+        SJVM003:     5 to 9 minutes
+        SJVM004:     10 to 14 minutes
+        SJVM005:     15 to 19 minutes
+        SJVM006:     20 to 24 minutes
+        SJVM007:     25 to 29 minutes
+        SJVM008:     30 to 34 minutes
+        SJVM009:     35 to 39 minutes
+        SJVM010:     40 to 44 minutes
+        SJVM011:     45 to 59 minutes
+        SJVM012:     60 to 89 minutes
+        SJVM013:     90 or more minutes
+ 
+    Table 7:     Household Type by Household Size
+    Universe:    Households
+    Source code: B11016
+    NHGIS code:  SNG
+        SNGM001:     Total
+        SNGM002:     Family households
+        SNGM003:     Family households: 2-person household
+        SNGM004:     Family households: 3-person household
+        SNGM005:     Family households: 4-person household
+        SNGM006:     Family households: 5-person household
+        SNGM007:     Family households: 6-person household
+        SNGM008:     Family households: 7-or-more person household
+        SNGM009:     Nonfamily households
+        SNGM010:     Nonfamily households: 1-person household
+        SNGM011:     Nonfamily households: 2-person household
+        SNGM012:     Nonfamily households: 3-person household
+        SNGM013:     Nonfamily households: 4-person household
+        SNGM014:     Nonfamily households: 5-person household
+        SNGM015:     Nonfamily households: 6-person household
+        SNGM016:     Nonfamily households: 7-or-more person household
+ 
+    Table 8:     Educational Attainment for the Population 25 Years and Over
+    Universe:    Population 25 years and over
+    Source code: C15003
+    NHGIS code:  SP8
+        SP8M001:     Total
+        SP8M002:     No schooling completed
+        SP8M003:     Nursery to 4th grade
+        SP8M004:     5th and 6th grade
+        SP8M005:     7th and 8th grade
+        SP8M006:     9th grade
+        SP8M007:     10th grade
+        SP8M008:     11th grade
+        SP8M009:     12th grade, no diploma
+        SP8M010:     Regular high school diploma
+        SP8M011:     GED or alternative credential
+        SP8M012:     Some college, less than 1 year
+        SP8M013:     Some college, 1 or more years, no degree
+        SP8M014:     Associate's degree
+        SP8M015:     Bachelor's degree
+        SP8M016:     Master's degree
+        SP8M017:     Professional school degree
+        SP8M018:     Doctorate degree
+ 
+    Table 9:     Employment Status by Disability Status
+    Universe:    Civilian noninstitutionalized population 18 to 64 years
+    Source code: C18120
+    NHGIS code:  SUP
+        SUPM001:     Total
+        SUPM002:     In the labor force
+        SUPM003:     In the labor force: Employed
+        SUPM004:     In the labor force: Employed: With a disability
+        SUPM005:     In the labor force: Employed: No disability
+        SUPM006:     In the labor force: Unemployed
+        SUPM007:     In the labor force: Unemployed: With a disability
+        SUPM008:     In the labor force: Unemployed: No disability
+        SUPM009:     Not in labor force
+        SUPM010:     Not in labor force: With a disability
+        SUPM011:     Not in labor force: No disability
+ 
+    Table 10:    Household Income in the Past 12 Months (in 2013 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19001
+    NHGIS code:  SUY
+        SUYM001:     Total
+        SUYM002:     Less than $10,000
+        SUYM003:     $10,000 to $14,999
+        SUYM004:     $15,000 to $19,999
+        SUYM005:     $20,000 to $24,999
+        SUYM006:     $25,000 to $29,999
+        SUYM007:     $30,000 to $34,999
+        SUYM008:     $35,000 to $39,999
+        SUYM009:     $40,000 to $44,999
+        SUYM010:     $45,000 to $49,999
+        SUYM011:     $50,000 to $59,999
+        SUYM012:     $60,000 to $74,999
+        SUYM013:     $75,000 to $99,999
+        SUYM014:     $100,000 to $124,999
+        SUYM015:     $125,000 to $149,999
+        SUYM016:     $150,000 to $199,999
+        SUYM017:     $200,000 or more
+ 
+    Table 11:    Types of Health Insurance Coverage by Age
+    Universe:    Civilian noninstitutionalized population
+    Source code: C27010
+    NHGIS code:  S8Q
+        S8QM001:     Total
+        S8QM002:     Under 18 years
+        S8QM003:     Under 18 years: With private health insurance only
+        S8QM004:     Under 18 years: With public coverage only
+        S8QM005:     Under 18 years: With both private and public coverage
+        S8QM006:     Under 18 years: No health insurance coverage
+        S8QM007:     18 to 34 years
+        S8QM008:     18 to 34 years: With private health insurance only
+        S8QM009:     18 to 34 years: With public coverage only
+        S8QM010:     18 to 34 years: With both private and public coverage
+        S8QM011:     18 to 34 years: No health insurance coverage
+        S8QM012:     35 to 64 years
+        S8QM013:     35 to 64 years: With private health insurance only
+        S8QM014:     35 to 64 years: With public coverage only
+        S8QM015:     35 to 64 years: With both private and public coverage
+        S8QM016:     35 to 64 years: No health insurance coverage
+        S8QM017:     65 years and over
+        S8QM018:     65 years and over: With private health insurance only
+        S8QM019:     65 years and over: With public coverage only
+        S8QM020:     65 years and over: With both private and public coverage
+        S8QM021:     65 years and over: No health insurance coverage
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+  data related to a particular publication. Contact us for permission for any other 
+  redistribution; we will consider requests for free and commercial redistribution.
+
+* CITATION: You will cite NHGIS appropriately.
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+      should include the following citation:
+
+        Steven Manson, Jonathan Schroeder, David Van Riper, and Steven Ruggles. 
+        IPUMS National Historical Geographic Information System: Version 13.0 
+        [Database]. Minneapolis: University of Minnesota. 2018. 
+        http://doi.org/10.18128/D050.V13.0
+
+    * Publications and research reports employing school attendance areas data 
+      (either tabular or GIS) must cite it appropriately. The citation should 
+      include the following:
+
+        The College of William and Mary and the Minnesota Population Center.
+        School Attendance Boundary Information System (SABINS): Version 1.0.
+        Minneapolis, MN: University of Minnesota 2011.
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+      recommend that you cite the use of NHGIS data as follows:
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+    * If possible, citations involving school attendance areas should also include
+      the URL for the SABINS site:
+
+        http://www.sabinsdata.org/.
+
+These terms of use are a legally binding agreement. You can use the data only in 
+accordance with these terms, and any other use is a violation of the agreement. 
+Violations may result in revocation of the agreement and prohibition from using other 
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+responsible for all damages, including reasonable attorney's fees and expenses.
+        
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+
+Send electronic material to: nhgis@umn.edu
+
+Printed matter should be sent to:
+
+    IPUMS NHGIS
+    Institute for Social Research and Data Innovation
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455
