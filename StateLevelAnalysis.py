@@ -19,29 +19,29 @@ df.drop(df.tail(1).index,inplace=True)
 
 #Lets create a election type indicator
 df['Presidential'] = np.where(df['Year']%4>0,0,1)
-df['YearSince2014'] = df['Year']-2014
+df['YearSince1950'] = df['Year']-1950
 
 #Lets see a run-sequence plot
 plt.plot(df[df['Presidential']==1]['Year'],df[df['Presidential']==1]['Percent Turnout'])
 plt.plot(df[df['Presidential']==0]['Year'],df[df['Presidential']==0]['Percent Turnout'])
 plt.show()
 
-#Okay, now lets test for autocorrelation
-from pandas.plotting import autocorrelation_plot
-autocorrelation_plot(df['Percent Turnout'])
-#Looks like there is at least 2nd-3rd order autocorrelation on a statewide basis
-
 #Lets try a regular linear regression
 from sklearn.linear_model import LinearRegression
 model = LinearRegression()
-model.fit(df[['YearSince2014','Presidential']],df['Percent Turnout'])
+model.fit(df[['YearSince1950','Presidential']],df['Percent Turnout'])
 print("Coefficients: ", model.coef_.round(5), " Intercept: ", round(model.intercept_,5))
 
 #Lets do this with a LassoCV
 from sklearn.linear_model import LassoCV
 model = LassoCV()
-model.fit(df[['YearSince2014','Presidential']],df['Percent Turnout'])
+model.fit(df[['YearSince1950','Presidential']],df['Percent Turnout'])
 print("Coefficients: ", model.coef_.round(5), " Intercept: ", round(model.intercept_,5))
+
+#Okay, now lets test for autocorrelation
+from pandas.plotting import autocorrelation_plot
+autocorrelation_plot(df['Percent Turnout'])
+#Looks like there is at least 2nd-3rd order autocorrelation on a statewide basis
 
 #Lets try an auto-arima
 from pyramid.arima import auto_arima
@@ -60,3 +60,4 @@ stepwise_fit = auto_arima(df['Percent Turnout'].values,
                           ic = 'bic')
 stepwise_fit.summary()
 #It seems like this is a 3rd order 
+#We could probably just model it as a 1st/2nd order due to low number of observations
