@@ -22,8 +22,12 @@ df['Presidential'] = np.where(df['Year']%4>0,0,1)
 df['YearSince1950'] = df['Year']-1950
 
 #Lets see a run-sequence plot
-plt.plot(df[df['Presidential']==1]['Year'],df[df['Presidential']==1]['Percent Turnout'])
-plt.plot(df[df['Presidential']==0]['Year'],df[df['Presidential']==0]['Percent Turnout'])
+plt.plot(df[df['Presidential']==1]['Year'],df[df['Presidential']==1]['Percent Turnout'], label = 'Presidental Elections')
+plt.plot(df[df['Presidential']==0]['Year'],df[df['Presidential']==0]['Percent Turnout'], label = 'Midterm Elections')
+plt.xlabel('Year')
+plt.ylabel('Turnout Rate')
+plt.title('MN Voter Turnout Rate by Year')
+plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
 plt.show()
 
 #Lets try a regular linear regression
@@ -61,3 +65,9 @@ stepwise_fit = auto_arima(df['Percent Turnout'].values,
 stepwise_fit.summary()
 #It seems like this is a 3rd order 
 #We could probably just model it as a 1st/2nd order due to low number of observations
+
+#Lets just fit a second order model
+import pyramid as pm
+arima_model = pm.ARIMA(order=(2,0,0))
+arima_model.fit(df['Percent Turnout'].values)
+arima_model.summary()
