@@ -1,0 +1,737 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'nhgis0015_ds214_2015_county'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             2015
+Geographic level: County (by State)
+Dataset:          2015 American Community Survey: 1-Year Data
+   NHGIS code:    2015_ACS1
+   NHGIS ID:      ds214
+Breakdown(s):     Geographic Subarea:
+                     Total area (00)
+Data type(s):     (E) Estimates
+                  (M) Margins of error
+ 
+Tables:
+ 
+1. Sex by Age
+   Universe:    Total population
+   Source code: B01001
+   NHGIS code:  ACJ9
+ 
+2. Total Population
+   Universe:    Total population
+   Source code: B01003
+   NHGIS code:  ACK2
+ 
+3. Race
+   Universe:    Total population
+   Source code: B02001
+   NHGIS code:  ACK3
+ 
+4. Place of Birth by Individual Income in the Past 12 Months (in 2015 Inflation-Adjusted Dollars) in the United States
+   Universe:    Population 15 years and over in the United States
+   Source code: B06010
+   NHGIS code:  ACNV
+ 
+5. Means of Transportation to Work
+   Universe:    Workers 16 years and over
+   Source code: C08301
+   NHGIS code:  ACSC
+ 
+6. Travel Time to Work
+   Universe:    Workers 16 years and over who did not work at home
+   Source code: B08303
+   NHGIS code:  ACSE
+ 
+7. Household Type by Household Size
+   Universe:    Households
+   Source code: B11016
+   NHGIS code:  ACVJ
+ 
+8. Educational Attainment for the Population 25 Years and Over
+   Universe:    Population 25 years and over
+   Source code: C15003
+   NHGIS code:  ACX8
+ 
+9. Employment Status by Disability Status
+   Universe:    Civilian noninstitutionalized population 18 to 64 years
+   Source code: C18120
+   NHGIS code:  AC2P
+ 
+10. Household Income in the Past 12 Months (in 2015 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19001
+    NHGIS code:  AC2Y
+ 
+11. Types of Health Insurance Coverage by Age
+    Universe:    Civilian noninstitutionalized population
+    Source code: C27010
+    NHGIS code:  ADGF
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        REGIONA:     Region Code
+        DIVISIONA:   Division Code
+        STATE:       State Name
+        STATEA:      State Code
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        COUSUBA:     County Subdivision Code
+        PLACEA:      Place Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        ANRCA:       Alaska Native Regional Corporation Code
+        CBSAA:       Metropolitan Statistical Area/Micropolitan Statistical Area Code
+        CSAA:        Combined Statistical Area Code
+        METDIVA:     Metropolitan Division Code
+        NECTAA:      New England City and Town Area Code
+        CNECTAA:     Combined New England City and Town Area Code
+        NECTADIVA:   New England City and Town Area Division Code
+        UAA:         Urban Area Code
+        CDCURRA:     Congressional District (2013-2017, 113th-114th Congress) Code
+        SDELMA:      School District (Elementary)/Remainder Code
+        SDSECA:      School District (Secondary)/Remainder Code
+        SDUNIA:      School District (Unified)/Remainder Code
+        PUMA5A:      Public Use Microdata Sample Area (PUMA) Code
+ 
+Data Type (E):
+    Estimates
+ 
+        NAME_E:      Area Name
+ 
+    Table 1:     Sex by Age
+    Universe:    Total population
+    Source code: B01001
+    NHGIS code:  ACJ9
+        ACJ9E001:    Total
+        ACJ9E002:    Male
+        ACJ9E003:    Male: Under 5 years
+        ACJ9E004:    Male: 5 to 9 years
+        ACJ9E005:    Male: 10 to 14 years
+        ACJ9E006:    Male: 15 to 17 years
+        ACJ9E007:    Male: 18 and 19 years
+        ACJ9E008:    Male: 20 years
+        ACJ9E009:    Male: 21 years
+        ACJ9E010:    Male: 22 to 24 years
+        ACJ9E011:    Male: 25 to 29 years
+        ACJ9E012:    Male: 30 to 34 years
+        ACJ9E013:    Male: 35 to 39 years
+        ACJ9E014:    Male: 40 to 44 years
+        ACJ9E015:    Male: 45 to 49 years
+        ACJ9E016:    Male: 50 to 54 years
+        ACJ9E017:    Male: 55 to 59 years
+        ACJ9E018:    Male: 60 and 61 years
+        ACJ9E019:    Male: 62 to 64 years
+        ACJ9E020:    Male: 65 and 66 years
+        ACJ9E021:    Male: 67 to 69 years
+        ACJ9E022:    Male: 70 to 74 years
+        ACJ9E023:    Male: 75 to 79 years
+        ACJ9E024:    Male: 80 to 84 years
+        ACJ9E025:    Male: 85 years and over
+        ACJ9E026:    Female
+        ACJ9E027:    Female: Under 5 years
+        ACJ9E028:    Female: 5 to 9 years
+        ACJ9E029:    Female: 10 to 14 years
+        ACJ9E030:    Female: 15 to 17 years
+        ACJ9E031:    Female: 18 and 19 years
+        ACJ9E032:    Female: 20 years
+        ACJ9E033:    Female: 21 years
+        ACJ9E034:    Female: 22 to 24 years
+        ACJ9E035:    Female: 25 to 29 years
+        ACJ9E036:    Female: 30 to 34 years
+        ACJ9E037:    Female: 35 to 39 years
+        ACJ9E038:    Female: 40 to 44 years
+        ACJ9E039:    Female: 45 to 49 years
+        ACJ9E040:    Female: 50 to 54 years
+        ACJ9E041:    Female: 55 to 59 years
+        ACJ9E042:    Female: 60 and 61 years
+        ACJ9E043:    Female: 62 to 64 years
+        ACJ9E044:    Female: 65 and 66 years
+        ACJ9E045:    Female: 67 to 69 years
+        ACJ9E046:    Female: 70 to 74 years
+        ACJ9E047:    Female: 75 to 79 years
+        ACJ9E048:    Female: 80 to 84 years
+        ACJ9E049:    Female: 85 years and over
+ 
+    Table 2:     Total Population
+    Universe:    Total population
+    Source code: B01003
+    NHGIS code:  ACK2
+        ACK2E001:    Total
+ 
+    Table 3:     Race
+    Universe:    Total population
+    Source code: B02001
+    NHGIS code:  ACK3
+        ACK3E001:    Total
+        ACK3E002:    White alone
+        ACK3E003:    Black or African American alone
+        ACK3E004:    American Indian and Alaska Native alone
+        ACK3E005:    Asian alone
+        ACK3E006:    Native Hawaiian and Other Pacific Islander alone
+        ACK3E007:    Some other race alone
+        ACK3E008:    Two or more races
+        ACK3E009:    Two or more races: Two races including Some other race
+        ACK3E010:    Two or more races: Two races excluding Some other race, and three or more races
+ 
+    Table 4:     Place of Birth by Individual Income in the Past 12 Months (in 2015 Inflation-Adjusted Dollars) in the United States
+    Universe:    Population 15 years and over in the United States
+    Source code: B06010
+    NHGIS code:  ACNV
+        ACNVE001:    Total
+        ACNVE002:    No income
+        ACNVE003:    With income
+        ACNVE004:    With income: $1 to $9,999 or loss
+        ACNVE005:    With income: $10,000 to $14,999
+        ACNVE006:    With income: $15,000 to $24,999
+        ACNVE007:    With income: $25,000 to $34,999
+        ACNVE008:    With income: $35,000 to $49,999
+        ACNVE009:    With income: $50,000 to $64,999
+        ACNVE010:    With income: $65,000 to $74,999
+        ACNVE011:    With income: $75,000 or more
+        ACNVE012:    Born in state of residence
+        ACNVE013:    Born in state of residence: No income
+        ACNVE014:    Born in state of residence: With income
+        ACNVE015:    Born in state of residence: With income: $1 to $9,999 or loss
+        ACNVE016:    Born in state of residence: With income: $10,000 to $14,999
+        ACNVE017:    Born in state of residence: With income: $15,000 to $24,999
+        ACNVE018:    Born in state of residence: With income: $25,000 to $34,999
+        ACNVE019:    Born in state of residence: With income: $35,000 to $49,999
+        ACNVE020:    Born in state of residence: With income: $50,000 to $64,999
+        ACNVE021:    Born in state of residence: With income: $65,000 to $74,999
+        ACNVE022:    Born in state of residence: With income: $75,000 or more
+        ACNVE023:    Born in other state in the United States
+        ACNVE024:    Born in other state in the United States: No income
+        ACNVE025:    Born in other state in the United States: With income
+        ACNVE026:    Born in other state in the United States: With income: $1 to $9,999 or loss
+        ACNVE027:    Born in other state in the United States: With income: $10,000 to $14,999
+        ACNVE028:    Born in other state in the United States: With income: $15,000 to $24,999
+        ACNVE029:    Born in other state in the United States: With income: $25,000 to $34,999
+        ACNVE030:    Born in other state in the United States: With income: $35,000 to $49,999
+        ACNVE031:    Born in other state in the United States: With income: $50,000 to $64,999
+        ACNVE032:    Born in other state in the United States: With income: $65,000 to $74,999
+        ACNVE033:    Born in other state in the United States: With income: $75,000 or more
+        ACNVE034:    Native; born outside the United States
+        ACNVE035:    Native; born outside the United States: No income
+        ACNVE036:    Native; born outside the United States: With income
+        ACNVE037:    Native; born outside the United States: With income: $1 to $9,999 or loss
+        ACNVE038:    Native; born outside the United States: With income: $10,000 to $14,999
+        ACNVE039:    Native; born outside the United States: With income: $15,000 to $24,999
+        ACNVE040:    Native; born outside the United States: With income: $25,000 to $34,999
+        ACNVE041:    Native; born outside the United States: With income: $35,000 to $49,999
+        ACNVE042:    Native; born outside the United States: With income: $50,000 to $64,999
+        ACNVE043:    Native; born outside the United States: With income: $65,000 to $74,999
+        ACNVE044:    Native; born outside the United States: With income: $75,000 or more
+        ACNVE045:    Foreign born
+        ACNVE046:    Foreign born: No income
+        ACNVE047:    Foreign born: With income
+        ACNVE048:    Foreign born: With income: $1 to $9,999 or loss
+        ACNVE049:    Foreign born: With income: $10,000 to $14,999
+        ACNVE050:    Foreign born: With income: $15,000 to $24,999
+        ACNVE051:    Foreign born: With income: $25,000 to $34,999
+        ACNVE052:    Foreign born: With income: $35,000 to $49,999
+        ACNVE053:    Foreign born: With income: $50,000 to $64,999
+        ACNVE054:    Foreign born: With income: $65,000 to $74,999
+        ACNVE055:    Foreign born: With income: $75,000 or more
+ 
+    Table 5:     Means of Transportation to Work
+    Universe:    Workers 16 years and over
+    Source code: C08301
+    NHGIS code:  ACSC
+        ACSCE001:    Total
+        ACSCE002:    Car, truck, or van
+        ACSCE003:    Car, truck, or van: Drove alone
+        ACSCE004:    Car, truck, or van: Carpooled
+        ACSCE005:    Car, truck, or van: Carpooled: In 2-person carpool
+        ACSCE006:    Car, truck, or van: Carpooled: In 3-person carpool
+        ACSCE007:    Car, truck, or van: Carpooled: In 4-or-more-person carpool
+        ACSCE008:    Public transportation (excluding taxicab)
+        ACSCE009:    Walked
+        ACSCE010:    Taxicab, motorcycle, bicycle, or other means
+        ACSCE011:    Worked at home
+ 
+    Table 6:     Travel Time to Work
+    Universe:    Workers 16 years and over who did not work at home
+    Source code: B08303
+    NHGIS code:  ACSE
+        ACSEE001:    Total
+        ACSEE002:    Less than 5 minutes
+        ACSEE003:    5 to 9 minutes
+        ACSEE004:    10 to 14 minutes
+        ACSEE005:    15 to 19 minutes
+        ACSEE006:    20 to 24 minutes
+        ACSEE007:    25 to 29 minutes
+        ACSEE008:    30 to 34 minutes
+        ACSEE009:    35 to 39 minutes
+        ACSEE010:    40 to 44 minutes
+        ACSEE011:    45 to 59 minutes
+        ACSEE012:    60 to 89 minutes
+        ACSEE013:    90 or more minutes
+ 
+    Table 7:     Household Type by Household Size
+    Universe:    Households
+    Source code: B11016
+    NHGIS code:  ACVJ
+        ACVJE001:    Total
+        ACVJE002:    Family households
+        ACVJE003:    Family households: 2-person household
+        ACVJE004:    Family households: 3-person household
+        ACVJE005:    Family households: 4-person household
+        ACVJE006:    Family households: 5-person household
+        ACVJE007:    Family households: 6-person household
+        ACVJE008:    Family households: 7-or-more person household
+        ACVJE009:    Nonfamily households
+        ACVJE010:    Nonfamily households: 1-person household
+        ACVJE011:    Nonfamily households: 2-person household
+        ACVJE012:    Nonfamily households: 3-person household
+        ACVJE013:    Nonfamily households: 4-person household
+        ACVJE014:    Nonfamily households: 5-person household
+        ACVJE015:    Nonfamily households: 6-person household
+        ACVJE016:    Nonfamily households: 7-or-more person household
+ 
+    Table 8:     Educational Attainment for the Population 25 Years and Over
+    Universe:    Population 25 years and over
+    Source code: C15003
+    NHGIS code:  ACX8
+        ACX8E001:    Total
+        ACX8E002:    No schooling completed
+        ACX8E003:    Nursery to 4th grade
+        ACX8E004:    5th and 6th grade
+        ACX8E005:    7th and 8th grade
+        ACX8E006:    9th grade
+        ACX8E007:    10th grade
+        ACX8E008:    11th grade
+        ACX8E009:    12th grade, no diploma
+        ACX8E010:    Regular high school diploma
+        ACX8E011:    GED or alternative credential
+        ACX8E012:    Some college, less than 1 year
+        ACX8E013:    Some college, 1 or more years, no degree
+        ACX8E014:    Associate's degree
+        ACX8E015:    Bachelor's degree
+        ACX8E016:    Master's degree
+        ACX8E017:    Professional school degree
+        ACX8E018:    Doctorate degree
+ 
+    Table 9:     Employment Status by Disability Status
+    Universe:    Civilian noninstitutionalized population 18 to 64 years
+    Source code: C18120
+    NHGIS code:  AC2P
+        AC2PE001:    Total
+        AC2PE002:    In the labor force
+        AC2PE003:    In the labor force: Employed
+        AC2PE004:    In the labor force: Employed: With a disability
+        AC2PE005:    In the labor force: Employed: No disability
+        AC2PE006:    In the labor force: Unemployed
+        AC2PE007:    In the labor force: Unemployed: With a disability
+        AC2PE008:    In the labor force: Unemployed: No disability
+        AC2PE009:    Not in labor force
+        AC2PE010:    Not in labor force: With a disability
+        AC2PE011:    Not in labor force: No disability
+ 
+    Table 10:    Household Income in the Past 12 Months (in 2015 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19001
+    NHGIS code:  AC2Y
+        AC2YE001:    Total
+        AC2YE002:    Less than $10,000
+        AC2YE003:    $10,000 to $14,999
+        AC2YE004:    $15,000 to $19,999
+        AC2YE005:    $20,000 to $24,999
+        AC2YE006:    $25,000 to $29,999
+        AC2YE007:    $30,000 to $34,999
+        AC2YE008:    $35,000 to $39,999
+        AC2YE009:    $40,000 to $44,999
+        AC2YE010:    $45,000 to $49,999
+        AC2YE011:    $50,000 to $59,999
+        AC2YE012:    $60,000 to $74,999
+        AC2YE013:    $75,000 to $99,999
+        AC2YE014:    $100,000 to $124,999
+        AC2YE015:    $125,000 to $149,999
+        AC2YE016:    $150,000 to $199,999
+        AC2YE017:    $200,000 or more
+ 
+    Table 11:    Types of Health Insurance Coverage by Age
+    Universe:    Civilian noninstitutionalized population
+    Source code: C27010
+    NHGIS code:  ADGF
+        ADGFE001:    Total
+        ADGFE002:    Under 18 years
+        ADGFE003:    Under 18 years: With private health insurance only
+        ADGFE004:    Under 18 years: With public coverage only
+        ADGFE005:    Under 18 years: With both private and public coverage
+        ADGFE006:    Under 18 years: No health insurance coverage
+        ADGFE007:    18 to 34 years
+        ADGFE008:    18 to 34 years: With private health insurance only
+        ADGFE009:    18 to 34 years: With public coverage only
+        ADGFE010:    18 to 34 years: With both private and public coverage
+        ADGFE011:    18 to 34 years: No health insurance coverage
+        ADGFE012:    35 to 64 years
+        ADGFE013:    35 to 64 years: With private health insurance only
+        ADGFE014:    35 to 64 years: With public coverage only
+        ADGFE015:    35 to 64 years: With both private and public coverage
+        ADGFE016:    35 to 64 years: No health insurance coverage
+        ADGFE017:    65 years and over
+        ADGFE018:    65 years and over: With private health insurance only
+        ADGFE019:    65 years and over: With public coverage only
+        ADGFE020:    65 years and over: With both private and public coverage
+        ADGFE021:    65 years and over: No health insurance coverage
+ 
+Data Type (M):
+    Margins of error
+ 
+        NAME_M:      Area Name
+ 
+    Table 1:     Sex by Age
+    Universe:    Total population
+    Source code: B01001
+    NHGIS code:  ACJ9
+        ACJ9M001:    Total
+        ACJ9M002:    Male
+        ACJ9M003:    Male: Under 5 years
+        ACJ9M004:    Male: 5 to 9 years
+        ACJ9M005:    Male: 10 to 14 years
+        ACJ9M006:    Male: 15 to 17 years
+        ACJ9M007:    Male: 18 and 19 years
+        ACJ9M008:    Male: 20 years
+        ACJ9M009:    Male: 21 years
+        ACJ9M010:    Male: 22 to 24 years
+        ACJ9M011:    Male: 25 to 29 years
+        ACJ9M012:    Male: 30 to 34 years
+        ACJ9M013:    Male: 35 to 39 years
+        ACJ9M014:    Male: 40 to 44 years
+        ACJ9M015:    Male: 45 to 49 years
+        ACJ9M016:    Male: 50 to 54 years
+        ACJ9M017:    Male: 55 to 59 years
+        ACJ9M018:    Male: 60 and 61 years
+        ACJ9M019:    Male: 62 to 64 years
+        ACJ9M020:    Male: 65 and 66 years
+        ACJ9M021:    Male: 67 to 69 years
+        ACJ9M022:    Male: 70 to 74 years
+        ACJ9M023:    Male: 75 to 79 years
+        ACJ9M024:    Male: 80 to 84 years
+        ACJ9M025:    Male: 85 years and over
+        ACJ9M026:    Female
+        ACJ9M027:    Female: Under 5 years
+        ACJ9M028:    Female: 5 to 9 years
+        ACJ9M029:    Female: 10 to 14 years
+        ACJ9M030:    Female: 15 to 17 years
+        ACJ9M031:    Female: 18 and 19 years
+        ACJ9M032:    Female: 20 years
+        ACJ9M033:    Female: 21 years
+        ACJ9M034:    Female: 22 to 24 years
+        ACJ9M035:    Female: 25 to 29 years
+        ACJ9M036:    Female: 30 to 34 years
+        ACJ9M037:    Female: 35 to 39 years
+        ACJ9M038:    Female: 40 to 44 years
+        ACJ9M039:    Female: 45 to 49 years
+        ACJ9M040:    Female: 50 to 54 years
+        ACJ9M041:    Female: 55 to 59 years
+        ACJ9M042:    Female: 60 and 61 years
+        ACJ9M043:    Female: 62 to 64 years
+        ACJ9M044:    Female: 65 and 66 years
+        ACJ9M045:    Female: 67 to 69 years
+        ACJ9M046:    Female: 70 to 74 years
+        ACJ9M047:    Female: 75 to 79 years
+        ACJ9M048:    Female: 80 to 84 years
+        ACJ9M049:    Female: 85 years and over
+ 
+    Table 2:     Total Population
+    Universe:    Total population
+    Source code: B01003
+    NHGIS code:  ACK2
+        ACK2M001:    Total
+ 
+    Table 3:     Race
+    Universe:    Total population
+    Source code: B02001
+    NHGIS code:  ACK3
+        ACK3M001:    Total
+        ACK3M002:    White alone
+        ACK3M003:    Black or African American alone
+        ACK3M004:    American Indian and Alaska Native alone
+        ACK3M005:    Asian alone
+        ACK3M006:    Native Hawaiian and Other Pacific Islander alone
+        ACK3M007:    Some other race alone
+        ACK3M008:    Two or more races
+        ACK3M009:    Two or more races: Two races including Some other race
+        ACK3M010:    Two or more races: Two races excluding Some other race, and three or more races
+ 
+    Table 4:     Place of Birth by Individual Income in the Past 12 Months (in 2015 Inflation-Adjusted Dollars) in the United States
+    Universe:    Population 15 years and over in the United States
+    Source code: B06010
+    NHGIS code:  ACNV
+        ACNVM001:    Total
+        ACNVM002:    No income
+        ACNVM003:    With income
+        ACNVM004:    With income: $1 to $9,999 or loss
+        ACNVM005:    With income: $10,000 to $14,999
+        ACNVM006:    With income: $15,000 to $24,999
+        ACNVM007:    With income: $25,000 to $34,999
+        ACNVM008:    With income: $35,000 to $49,999
+        ACNVM009:    With income: $50,000 to $64,999
+        ACNVM010:    With income: $65,000 to $74,999
+        ACNVM011:    With income: $75,000 or more
+        ACNVM012:    Born in state of residence
+        ACNVM013:    Born in state of residence: No income
+        ACNVM014:    Born in state of residence: With income
+        ACNVM015:    Born in state of residence: With income: $1 to $9,999 or loss
+        ACNVM016:    Born in state of residence: With income: $10,000 to $14,999
+        ACNVM017:    Born in state of residence: With income: $15,000 to $24,999
+        ACNVM018:    Born in state of residence: With income: $25,000 to $34,999
+        ACNVM019:    Born in state of residence: With income: $35,000 to $49,999
+        ACNVM020:    Born in state of residence: With income: $50,000 to $64,999
+        ACNVM021:    Born in state of residence: With income: $65,000 to $74,999
+        ACNVM022:    Born in state of residence: With income: $75,000 or more
+        ACNVM023:    Born in other state in the United States
+        ACNVM024:    Born in other state in the United States: No income
+        ACNVM025:    Born in other state in the United States: With income
+        ACNVM026:    Born in other state in the United States: With income: $1 to $9,999 or loss
+        ACNVM027:    Born in other state in the United States: With income: $10,000 to $14,999
+        ACNVM028:    Born in other state in the United States: With income: $15,000 to $24,999
+        ACNVM029:    Born in other state in the United States: With income: $25,000 to $34,999
+        ACNVM030:    Born in other state in the United States: With income: $35,000 to $49,999
+        ACNVM031:    Born in other state in the United States: With income: $50,000 to $64,999
+        ACNVM032:    Born in other state in the United States: With income: $65,000 to $74,999
+        ACNVM033:    Born in other state in the United States: With income: $75,000 or more
+        ACNVM034:    Native; born outside the United States
+        ACNVM035:    Native; born outside the United States: No income
+        ACNVM036:    Native; born outside the United States: With income
+        ACNVM037:    Native; born outside the United States: With income: $1 to $9,999 or loss
+        ACNVM038:    Native; born outside the United States: With income: $10,000 to $14,999
+        ACNVM039:    Native; born outside the United States: With income: $15,000 to $24,999
+        ACNVM040:    Native; born outside the United States: With income: $25,000 to $34,999
+        ACNVM041:    Native; born outside the United States: With income: $35,000 to $49,999
+        ACNVM042:    Native; born outside the United States: With income: $50,000 to $64,999
+        ACNVM043:    Native; born outside the United States: With income: $65,000 to $74,999
+        ACNVM044:    Native; born outside the United States: With income: $75,000 or more
+        ACNVM045:    Foreign born
+        ACNVM046:    Foreign born: No income
+        ACNVM047:    Foreign born: With income
+        ACNVM048:    Foreign born: With income: $1 to $9,999 or loss
+        ACNVM049:    Foreign born: With income: $10,000 to $14,999
+        ACNVM050:    Foreign born: With income: $15,000 to $24,999
+        ACNVM051:    Foreign born: With income: $25,000 to $34,999
+        ACNVM052:    Foreign born: With income: $35,000 to $49,999
+        ACNVM053:    Foreign born: With income: $50,000 to $64,999
+        ACNVM054:    Foreign born: With income: $65,000 to $74,999
+        ACNVM055:    Foreign born: With income: $75,000 or more
+ 
+    Table 5:     Means of Transportation to Work
+    Universe:    Workers 16 years and over
+    Source code: C08301
+    NHGIS code:  ACSC
+        ACSCM001:    Total
+        ACSCM002:    Car, truck, or van
+        ACSCM003:    Car, truck, or van: Drove alone
+        ACSCM004:    Car, truck, or van: Carpooled
+        ACSCM005:    Car, truck, or van: Carpooled: In 2-person carpool
+        ACSCM006:    Car, truck, or van: Carpooled: In 3-person carpool
+        ACSCM007:    Car, truck, or van: Carpooled: In 4-or-more-person carpool
+        ACSCM008:    Public transportation (excluding taxicab)
+        ACSCM009:    Walked
+        ACSCM010:    Taxicab, motorcycle, bicycle, or other means
+        ACSCM011:    Worked at home
+ 
+    Table 6:     Travel Time to Work
+    Universe:    Workers 16 years and over who did not work at home
+    Source code: B08303
+    NHGIS code:  ACSE
+        ACSEM001:    Total
+        ACSEM002:    Less than 5 minutes
+        ACSEM003:    5 to 9 minutes
+        ACSEM004:    10 to 14 minutes
+        ACSEM005:    15 to 19 minutes
+        ACSEM006:    20 to 24 minutes
+        ACSEM007:    25 to 29 minutes
+        ACSEM008:    30 to 34 minutes
+        ACSEM009:    35 to 39 minutes
+        ACSEM010:    40 to 44 minutes
+        ACSEM011:    45 to 59 minutes
+        ACSEM012:    60 to 89 minutes
+        ACSEM013:    90 or more minutes
+ 
+    Table 7:     Household Type by Household Size
+    Universe:    Households
+    Source code: B11016
+    NHGIS code:  ACVJ
+        ACVJM001:    Total
+        ACVJM002:    Family households
+        ACVJM003:    Family households: 2-person household
+        ACVJM004:    Family households: 3-person household
+        ACVJM005:    Family households: 4-person household
+        ACVJM006:    Family households: 5-person household
+        ACVJM007:    Family households: 6-person household
+        ACVJM008:    Family households: 7-or-more person household
+        ACVJM009:    Nonfamily households
+        ACVJM010:    Nonfamily households: 1-person household
+        ACVJM011:    Nonfamily households: 2-person household
+        ACVJM012:    Nonfamily households: 3-person household
+        ACVJM013:    Nonfamily households: 4-person household
+        ACVJM014:    Nonfamily households: 5-person household
+        ACVJM015:    Nonfamily households: 6-person household
+        ACVJM016:    Nonfamily households: 7-or-more person household
+ 
+    Table 8:     Educational Attainment for the Population 25 Years and Over
+    Universe:    Population 25 years and over
+    Source code: C15003
+    NHGIS code:  ACX8
+        ACX8M001:    Total
+        ACX8M002:    No schooling completed
+        ACX8M003:    Nursery to 4th grade
+        ACX8M004:    5th and 6th grade
+        ACX8M005:    7th and 8th grade
+        ACX8M006:    9th grade
+        ACX8M007:    10th grade
+        ACX8M008:    11th grade
+        ACX8M009:    12th grade, no diploma
+        ACX8M010:    Regular high school diploma
+        ACX8M011:    GED or alternative credential
+        ACX8M012:    Some college, less than 1 year
+        ACX8M013:    Some college, 1 or more years, no degree
+        ACX8M014:    Associate's degree
+        ACX8M015:    Bachelor's degree
+        ACX8M016:    Master's degree
+        ACX8M017:    Professional school degree
+        ACX8M018:    Doctorate degree
+ 
+    Table 9:     Employment Status by Disability Status
+    Universe:    Civilian noninstitutionalized population 18 to 64 years
+    Source code: C18120
+    NHGIS code:  AC2P
+        AC2PM001:    Total
+        AC2PM002:    In the labor force
+        AC2PM003:    In the labor force: Employed
+        AC2PM004:    In the labor force: Employed: With a disability
+        AC2PM005:    In the labor force: Employed: No disability
+        AC2PM006:    In the labor force: Unemployed
+        AC2PM007:    In the labor force: Unemployed: With a disability
+        AC2PM008:    In the labor force: Unemployed: No disability
+        AC2PM009:    Not in labor force
+        AC2PM010:    Not in labor force: With a disability
+        AC2PM011:    Not in labor force: No disability
+ 
+    Table 10:    Household Income in the Past 12 Months (in 2015 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19001
+    NHGIS code:  AC2Y
+        AC2YM001:    Total
+        AC2YM002:    Less than $10,000
+        AC2YM003:    $10,000 to $14,999
+        AC2YM004:    $15,000 to $19,999
+        AC2YM005:    $20,000 to $24,999
+        AC2YM006:    $25,000 to $29,999
+        AC2YM007:    $30,000 to $34,999
+        AC2YM008:    $35,000 to $39,999
+        AC2YM009:    $40,000 to $44,999
+        AC2YM010:    $45,000 to $49,999
+        AC2YM011:    $50,000 to $59,999
+        AC2YM012:    $60,000 to $74,999
+        AC2YM013:    $75,000 to $99,999
+        AC2YM014:    $100,000 to $124,999
+        AC2YM015:    $125,000 to $149,999
+        AC2YM016:    $150,000 to $199,999
+        AC2YM017:    $200,000 or more
+ 
+    Table 11:    Types of Health Insurance Coverage by Age
+    Universe:    Civilian noninstitutionalized population
+    Source code: C27010
+    NHGIS code:  ADGF
+        ADGFM001:    Total
+        ADGFM002:    Under 18 years
+        ADGFM003:    Under 18 years: With private health insurance only
+        ADGFM004:    Under 18 years: With public coverage only
+        ADGFM005:    Under 18 years: With both private and public coverage
+        ADGFM006:    Under 18 years: No health insurance coverage
+        ADGFM007:    18 to 34 years
+        ADGFM008:    18 to 34 years: With private health insurance only
+        ADGFM009:    18 to 34 years: With public coverage only
+        ADGFM010:    18 to 34 years: With both private and public coverage
+        ADGFM011:    18 to 34 years: No health insurance coverage
+        ADGFM012:    35 to 64 years
+        ADGFM013:    35 to 64 years: With private health insurance only
+        ADGFM014:    35 to 64 years: With public coverage only
+        ADGFM015:    35 to 64 years: With both private and public coverage
+        ADGFM016:    35 to 64 years: No health insurance coverage
+        ADGFM017:    65 years and over
+        ADGFM018:    65 years and over: With private health insurance only
+        ADGFM019:    65 years and over: With public coverage only
+        ADGFM020:    65 years and over: With both private and public coverage
+        ADGFM021:    65 years and over: No health insurance coverage
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+  data related to a particular publication. Contact us for permission for any other 
+  redistribution; we will consider requests for free and commercial redistribution.
+
+* CITATION: You will cite NHGIS appropriately.
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+      should include the following citation:
+
+        Steven Manson, Jonathan Schroeder, David Van Riper, and Steven Ruggles. 
+        IPUMS National Historical Geographic Information System: Version 13.0 
+        [Database]. Minneapolis: University of Minnesota. 2018. 
+        http://doi.org/10.18128/D050.V13.0
+
+    * Publications and research reports employing school attendance areas data 
+      (either tabular or GIS) must cite it appropriately. The citation should 
+      include the following:
+
+        The College of William and Mary and the Minnesota Population Center.
+        School Attendance Boundary Information System (SABINS): Version 1.0.
+        Minneapolis, MN: University of Minnesota 2011.
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+      recommend that you cite the use of NHGIS data as follows:
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+    * If possible, citations involving school attendance areas should also include
+      the URL for the SABINS site:
+
+        http://www.sabinsdata.org/.
+
+These terms of use are a legally binding agreement. You can use the data only in 
+accordance with these terms, and any other use is a violation of the agreement. 
+Violations may result in revocation of the agreement and prohibition from using other 
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+responsible for all damages, including reasonable attorney's fees and expenses.
+        
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+
+Send electronic material to: nhgis@umn.edu
+
+Printed matter should be sent to:
+
+    IPUMS NHGIS
+    Institute for Social Research and Data Innovation
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455

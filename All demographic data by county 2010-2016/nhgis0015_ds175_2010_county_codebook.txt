@@ -1,0 +1,737 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'nhgis0015_ds175_2010_county'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             2010
+Geographic level: County (by State)
+Dataset:          2010 American Community Survey: 1-Year Data
+   NHGIS code:    2010_ACS1
+   NHGIS ID:      ds175
+Breakdown(s):     Geographic Subarea:
+                     Total area (00)
+Data type(s):     (E) Estimates
+                  (M) Margins of error
+ 
+Tables:
+ 
+1. Sex by Age
+   Universe:    Total population
+   Source code: B01001
+   NHGIS code:  IG4
+ 
+2. Total Population
+   Universe:    Total population
+   Source code: B01003
+   NHGIS code:  IHX
+ 
+3. Race
+   Universe:    Total population
+   Source code: B02001
+   NHGIS code:  IHY
+ 
+4. Place of Birth by Individual Income in the Past 12 Months (in 2010 Inflation-Adjusted Dollars) in the United States
+   Universe:    Population 15 years and over in the United States
+   Source code: B06010
+   NHGIS code:  IK6
+ 
+5. Means of Transportation to Work
+   Universe:    Workers 16 years and over
+   Source code: C08301
+   NHGIS code:  IQB
+ 
+6. Travel Time to Work
+   Universe:    Workers 16 years and over who did not work at home
+   Source code: B08303
+   NHGIS code:  IQE
+ 
+7. Household Type by Household Size
+   Universe:    Households
+   Source code: B11016
+   NHGIS code:  IUJ
+ 
+8. Educational Attainment for the Population 25 Years and Over
+   Universe:    Population 25 years and over
+   Source code: C15003
+   NHGIS code:  IXN
+ 
+9. Employment Status by Disability Status
+   Universe:    Civilian noninstitutionalized population 18 to 64 years
+   Source code: C18120
+   NHGIS code:  I2C
+ 
+10. Household Income in the Past 12 Months (in 2010 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19001
+    NHGIS code:  I2L
+ 
+11. Types of Health Insurance Coverage by Age
+    Universe:    Civilian noninstitutionalized population
+    Source code: C27010
+    NHGIS code:  JIG
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        REGIONA:     Region Code
+        DIVISIONA:   Division Code
+        STATE:       State Name
+        STATEA:      State Code
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        COUSUBA:     County Subdivision Code
+        PLACEA:      Place Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        ANRCA:       Alaska Native Regional Corporation Code
+        CBSAA:       Metropolitan Statistical Area/Micropolitan Statistical Area Code
+        CSAA:        Combined Statistical Area Code
+        METDIVA:     Metropolitan Division Code
+        NECTAA:      New England City and Town Area Code
+        CNECTAA:     Combined New England City and Town Area Code
+        NECTADIVA:   NECTA Division Code
+        UAA:         Urban Area Code
+        CDCURRA:     Congressional District (111th Congress) Code
+        SDELMA:      School District (Elementary)/Remainder Code
+        SDSECA:      School District (Secondary)/Remainder Code
+        SDUNIA:      School District (Unified)/Remainder Code
+        PUMA5A:      Public Use Microdata Sample Area (PUMA) Code
+ 
+Data Type (E):
+    Estimates
+ 
+        NAME_E:      Area Name
+ 
+    Table 1:     Sex by Age
+    Universe:    Total population
+    Source code: B01001
+    NHGIS code:  IG4
+        IG4E001:     Total
+        IG4E002:     Male
+        IG4E003:     Male: Under 5 years
+        IG4E004:     Male: 5 to 9 years
+        IG4E005:     Male: 10 to 14 years
+        IG4E006:     Male: 15 to 17 years
+        IG4E007:     Male: 18 and 19 years
+        IG4E008:     Male: 20 years
+        IG4E009:     Male: 21 years
+        IG4E010:     Male: 22 to 24 years
+        IG4E011:     Male: 25 to 29 years
+        IG4E012:     Male: 30 to 34 years
+        IG4E013:     Male: 35 to 39 years
+        IG4E014:     Male: 40 to 44 years
+        IG4E015:     Male: 45 to 49 years
+        IG4E016:     Male: 50 to 54 years
+        IG4E017:     Male: 55 to 59 years
+        IG4E018:     Male: 60 and 61 years
+        IG4E019:     Male: 62 to 64 years
+        IG4E020:     Male: 65 and 66 years
+        IG4E021:     Male: 67 to 69 years
+        IG4E022:     Male: 70 to 74 years
+        IG4E023:     Male: 75 to 79 years
+        IG4E024:     Male: 80 to 84 years
+        IG4E025:     Male: 85 years and over
+        IG4E026:     Female
+        IG4E027:     Female: Under 5 years
+        IG4E028:     Female: 5 to 9 years
+        IG4E029:     Female: 10 to 14 years
+        IG4E030:     Female: 15 to 17 years
+        IG4E031:     Female: 18 and 19 years
+        IG4E032:     Female: 20 years
+        IG4E033:     Female: 21 years
+        IG4E034:     Female: 22 to 24 years
+        IG4E035:     Female: 25 to 29 years
+        IG4E036:     Female: 30 to 34 years
+        IG4E037:     Female: 35 to 39 years
+        IG4E038:     Female: 40 to 44 years
+        IG4E039:     Female: 45 to 49 years
+        IG4E040:     Female: 50 to 54 years
+        IG4E041:     Female: 55 to 59 years
+        IG4E042:     Female: 60 and 61 years
+        IG4E043:     Female: 62 to 64 years
+        IG4E044:     Female: 65 and 66 years
+        IG4E045:     Female: 67 to 69 years
+        IG4E046:     Female: 70 to 74 years
+        IG4E047:     Female: 75 to 79 years
+        IG4E048:     Female: 80 to 84 years
+        IG4E049:     Female: 85 years and over
+ 
+    Table 2:     Total Population
+    Universe:    Total population
+    Source code: B01003
+    NHGIS code:  IHX
+        IHXE001:     Total
+ 
+    Table 3:     Race
+    Universe:    Total population
+    Source code: B02001
+    NHGIS code:  IHY
+        IHYE001:     Total
+        IHYE002:     White alone
+        IHYE003:     Black or African American alone
+        IHYE004:     American Indian and Alaska Native alone
+        IHYE005:     Asian alone
+        IHYE006:     Native Hawaiian and Other Pacific Islander alone
+        IHYE007:     Some other race alone
+        IHYE008:     Two or more races
+        IHYE009:     Two or more races: Two races including Some other race
+        IHYE010:     Two or more races: Two races excluding Some other race, and three or more races
+ 
+    Table 4:     Place of Birth by Individual Income in the Past 12 Months (in 2010 Inflation-Adjusted Dollars) in the United States
+    Universe:    Population 15 years and over in the United States
+    Source code: B06010
+    NHGIS code:  IK6
+        IK6E001:     Total
+        IK6E002:     No income
+        IK6E003:     With income
+        IK6E004:     With income: $1 to $9,999 or loss
+        IK6E005:     With income: $10,000 to $14,999
+        IK6E006:     With income: $15,000 to $24,999
+        IK6E007:     With income: $25,000 to $34,999
+        IK6E008:     With income: $35,000 to $49,999
+        IK6E009:     With income: $50,000 to $64,999
+        IK6E010:     With income: $65,000 to $74,999
+        IK6E011:     With income: $75,000 or more
+        IK6E012:     Born in state of residence
+        IK6E013:     Born in state of residence: No income
+        IK6E014:     Born in state of residence: With income
+        IK6E015:     Born in state of residence: With income: $1 to $9,999 or loss
+        IK6E016:     Born in state of residence: With income: $10,000 to $14,999
+        IK6E017:     Born in state of residence: With income: $15,000 to $24,999
+        IK6E018:     Born in state of residence: With income: $25,000 to $34,999
+        IK6E019:     Born in state of residence: With income: $35,000 to $49,999
+        IK6E020:     Born in state of residence: With income: $50,000 to $64,999
+        IK6E021:     Born in state of residence: With income: $65,000 to $74,999
+        IK6E022:     Born in state of residence: With income: $75,000 or more
+        IK6E023:     Born in other state in the United States
+        IK6E024:     Born in other state in the United States: No income
+        IK6E025:     Born in other state in the United States: With income
+        IK6E026:     Born in other state in the United States: With income: $1 to $9,999 or loss
+        IK6E027:     Born in other state in the United States: With income: $10,000 to $14,999
+        IK6E028:     Born in other state in the United States: With income: $15,000 to $24,999
+        IK6E029:     Born in other state in the United States: With income: $25,000 to $34,999
+        IK6E030:     Born in other state in the United States: With income: $35,000 to $49,999
+        IK6E031:     Born in other state in the United States: With income: $50,000 to $64,999
+        IK6E032:     Born in other state in the United States: With income: $65,000 to $74,999
+        IK6E033:     Born in other state in the United States: With income: $75,000 or more
+        IK6E034:     Native; born outside the United States
+        IK6E035:     Native; born outside the United States: No income
+        IK6E036:     Native; born outside the United States: With income
+        IK6E037:     Native; born outside the United States: With income: $1 to $9,999 or loss
+        IK6E038:     Native; born outside the United States: With income: $10,000 to $14,999
+        IK6E039:     Native; born outside the United States: With income: $15,000 to $24,999
+        IK6E040:     Native; born outside the United States: With income: $25,000 to $34,999
+        IK6E041:     Native; born outside the United States: With income: $35,000 to $49,999
+        IK6E042:     Native; born outside the United States: With income: $50,000 to $64,999
+        IK6E043:     Native; born outside the United States: With income: $65,000 to $74,999
+        IK6E044:     Native; born outside the United States: With income: $75,000 or more
+        IK6E045:     Foreign born
+        IK6E046:     Foreign born: No income
+        IK6E047:     Foreign born: With income
+        IK6E048:     Foreign born: With income: $1 to $9,999 or loss
+        IK6E049:     Foreign born: With income: $10,000 to $14,999
+        IK6E050:     Foreign born: With income: $15,000 to $24,999
+        IK6E051:     Foreign born: With income: $25,000 to $34,999
+        IK6E052:     Foreign born: With income: $35,000 to $49,999
+        IK6E053:     Foreign born: With income: $50,000 to $64,999
+        IK6E054:     Foreign born: With income: $65,000 to $74,999
+        IK6E055:     Foreign born: With income: $75,000 or more
+ 
+    Table 5:     Means of Transportation to Work
+    Universe:    Workers 16 years and over
+    Source code: C08301
+    NHGIS code:  IQB
+        IQBE001:     Total
+        IQBE002:     Car, truck, or van
+        IQBE003:     Car, truck, or van: Drove alone
+        IQBE004:     Car, truck, or van: Carpooled
+        IQBE005:     Car, truck, or van: Carpooled: In 2-person carpool
+        IQBE006:     Car, truck, or van: Carpooled: In 3-person carpool
+        IQBE007:     Car, truck, or van: Carpooled: In 4-or-more-person carpool
+        IQBE008:     Public transportation (excluding taxicab)
+        IQBE009:     Walked
+        IQBE010:     Taxicab, motorcycle, bicycle, or other means
+        IQBE011:     Worked at home
+ 
+    Table 6:     Travel Time to Work
+    Universe:    Workers 16 years and over who did not work at home
+    Source code: B08303
+    NHGIS code:  IQE
+        IQEE001:     Total
+        IQEE002:     Less than 5 minutes
+        IQEE003:     5 to 9 minutes
+        IQEE004:     10 to 14 minutes
+        IQEE005:     15 to 19 minutes
+        IQEE006:     20 to 24 minutes
+        IQEE007:     25 to 29 minutes
+        IQEE008:     30 to 34 minutes
+        IQEE009:     35 to 39 minutes
+        IQEE010:     40 to 44 minutes
+        IQEE011:     45 to 59 minutes
+        IQEE012:     60 to 89 minutes
+        IQEE013:     90 or more minutes
+ 
+    Table 7:     Household Type by Household Size
+    Universe:    Households
+    Source code: B11016
+    NHGIS code:  IUJ
+        IUJE001:     Total
+        IUJE002:     Family households
+        IUJE003:     Family households: 2-person household
+        IUJE004:     Family households: 3-person household
+        IUJE005:     Family households: 4-person household
+        IUJE006:     Family households: 5-person household
+        IUJE007:     Family households: 6-person household
+        IUJE008:     Family households: 7-or-more person household
+        IUJE009:     Nonfamily households
+        IUJE010:     Nonfamily households: 1-person household
+        IUJE011:     Nonfamily households: 2-person household
+        IUJE012:     Nonfamily households: 3-person household
+        IUJE013:     Nonfamily households: 4-person household
+        IUJE014:     Nonfamily households: 5-person household
+        IUJE015:     Nonfamily households: 6-person household
+        IUJE016:     Nonfamily households: 7-or-more person household
+ 
+    Table 8:     Educational Attainment for the Population 25 Years and Over
+    Universe:    Population 25 years and over
+    Source code: C15003
+    NHGIS code:  IXN
+        IXNE001:     Total
+        IXNE002:     No schooling completed
+        IXNE003:     Nursery to 4th grade
+        IXNE004:     5th and 6th grade
+        IXNE005:     7th and 8th grade
+        IXNE006:     9th grade
+        IXNE007:     10th grade
+        IXNE008:     11th grade
+        IXNE009:     12th grade, no diploma
+        IXNE010:     Regular high school diploma
+        IXNE011:     GED or alternative credential
+        IXNE012:     Some college, less than 1 year
+        IXNE013:     Some college, 1 or more years, no degree
+        IXNE014:     Associate's degree
+        IXNE015:     Bachelor's degree
+        IXNE016:     Master's degree
+        IXNE017:     Professional school degree
+        IXNE018:     Doctorate degree
+ 
+    Table 9:     Employment Status by Disability Status
+    Universe:    Civilian noninstitutionalized population 18 to 64 years
+    Source code: C18120
+    NHGIS code:  I2C
+        I2CE001:     Total
+        I2CE002:     In the labor force
+        I2CE003:     In the labor force: Employed
+        I2CE004:     In the labor force: Employed: With a disability
+        I2CE005:     In the labor force: Employed: No disability
+        I2CE006:     In the labor force: Unemployed
+        I2CE007:     In the labor force: Unemployed: With a disability
+        I2CE008:     In the labor force: Unemployed: No disability
+        I2CE009:     Not in labor force
+        I2CE010:     Not in labor force: With a disability
+        I2CE011:     Not in labor force: No disability
+ 
+    Table 10:    Household Income in the Past 12 Months (in 2010 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19001
+    NHGIS code:  I2L
+        I2LE001:     Total
+        I2LE002:     Less than $10,000
+        I2LE003:     $10,000 to $14,999
+        I2LE004:     $15,000 to $19,999
+        I2LE005:     $20,000 to $24,999
+        I2LE006:     $25,000 to $29,999
+        I2LE007:     $30,000 to $34,999
+        I2LE008:     $35,000 to $39,999
+        I2LE009:     $40,000 to $44,999
+        I2LE010:     $45,000 to $49,999
+        I2LE011:     $50,000 to $59,999
+        I2LE012:     $60,000 to $74,999
+        I2LE013:     $75,000 to $99,999
+        I2LE014:     $100,000 to $124,999
+        I2LE015:     $125,000 to $149,999
+        I2LE016:     $150,000 to $199,999
+        I2LE017:     $200,000 or more
+ 
+    Table 11:    Types of Health Insurance Coverage by Age
+    Universe:    Civilian noninstitutionalized population
+    Source code: C27010
+    NHGIS code:  JIG
+        JIGE001:     Total
+        JIGE002:     Under 18 years
+        JIGE003:     Under 18 years: With private health insurance only
+        JIGE004:     Under 18 years: With public coverage only
+        JIGE005:     Under 18 years: With both private and public coverage
+        JIGE006:     Under 18 years: No health insurance coverage
+        JIGE007:     18 to 34 years
+        JIGE008:     18 to 34 years: With private health insurance only
+        JIGE009:     18 to 34 years: With public coverage only
+        JIGE010:     18 to 34 years: With both private and public coverage
+        JIGE011:     18 to 34 years: No health insurance coverage
+        JIGE012:     35 to 64 years
+        JIGE013:     35 to 64 years: With private health insurance only
+        JIGE014:     35 to 64 years: With public coverage only
+        JIGE015:     35 to 64 years: With both private and public coverage
+        JIGE016:     35 to 64 years: No health insurance coverage
+        JIGE017:     65 years and over
+        JIGE018:     65 years and over: With private health insurance only
+        JIGE019:     65 years and over: With public coverage only
+        JIGE020:     65 years and over: With both private and public coverage
+        JIGE021:     65 years and over: No health insurance coverage
+ 
+Data Type (M):
+    Margins of error
+ 
+        NAME_M:      Area Name
+ 
+    Table 1:     Sex by Age
+    Universe:    Total population
+    Source code: B01001
+    NHGIS code:  IG4
+        IG4M001:     Total
+        IG4M002:     Male
+        IG4M003:     Male: Under 5 years
+        IG4M004:     Male: 5 to 9 years
+        IG4M005:     Male: 10 to 14 years
+        IG4M006:     Male: 15 to 17 years
+        IG4M007:     Male: 18 and 19 years
+        IG4M008:     Male: 20 years
+        IG4M009:     Male: 21 years
+        IG4M010:     Male: 22 to 24 years
+        IG4M011:     Male: 25 to 29 years
+        IG4M012:     Male: 30 to 34 years
+        IG4M013:     Male: 35 to 39 years
+        IG4M014:     Male: 40 to 44 years
+        IG4M015:     Male: 45 to 49 years
+        IG4M016:     Male: 50 to 54 years
+        IG4M017:     Male: 55 to 59 years
+        IG4M018:     Male: 60 and 61 years
+        IG4M019:     Male: 62 to 64 years
+        IG4M020:     Male: 65 and 66 years
+        IG4M021:     Male: 67 to 69 years
+        IG4M022:     Male: 70 to 74 years
+        IG4M023:     Male: 75 to 79 years
+        IG4M024:     Male: 80 to 84 years
+        IG4M025:     Male: 85 years and over
+        IG4M026:     Female
+        IG4M027:     Female: Under 5 years
+        IG4M028:     Female: 5 to 9 years
+        IG4M029:     Female: 10 to 14 years
+        IG4M030:     Female: 15 to 17 years
+        IG4M031:     Female: 18 and 19 years
+        IG4M032:     Female: 20 years
+        IG4M033:     Female: 21 years
+        IG4M034:     Female: 22 to 24 years
+        IG4M035:     Female: 25 to 29 years
+        IG4M036:     Female: 30 to 34 years
+        IG4M037:     Female: 35 to 39 years
+        IG4M038:     Female: 40 to 44 years
+        IG4M039:     Female: 45 to 49 years
+        IG4M040:     Female: 50 to 54 years
+        IG4M041:     Female: 55 to 59 years
+        IG4M042:     Female: 60 and 61 years
+        IG4M043:     Female: 62 to 64 years
+        IG4M044:     Female: 65 and 66 years
+        IG4M045:     Female: 67 to 69 years
+        IG4M046:     Female: 70 to 74 years
+        IG4M047:     Female: 75 to 79 years
+        IG4M048:     Female: 80 to 84 years
+        IG4M049:     Female: 85 years and over
+ 
+    Table 2:     Total Population
+    Universe:    Total population
+    Source code: B01003
+    NHGIS code:  IHX
+        IHXM001:     Total
+ 
+    Table 3:     Race
+    Universe:    Total population
+    Source code: B02001
+    NHGIS code:  IHY
+        IHYM001:     Total
+        IHYM002:     White alone
+        IHYM003:     Black or African American alone
+        IHYM004:     American Indian and Alaska Native alone
+        IHYM005:     Asian alone
+        IHYM006:     Native Hawaiian and Other Pacific Islander alone
+        IHYM007:     Some other race alone
+        IHYM008:     Two or more races
+        IHYM009:     Two or more races: Two races including Some other race
+        IHYM010:     Two or more races: Two races excluding Some other race, and three or more races
+ 
+    Table 4:     Place of Birth by Individual Income in the Past 12 Months (in 2010 Inflation-Adjusted Dollars) in the United States
+    Universe:    Population 15 years and over in the United States
+    Source code: B06010
+    NHGIS code:  IK6
+        IK6M001:     Total
+        IK6M002:     No income
+        IK6M003:     With income
+        IK6M004:     With income: $1 to $9,999 or loss
+        IK6M005:     With income: $10,000 to $14,999
+        IK6M006:     With income: $15,000 to $24,999
+        IK6M007:     With income: $25,000 to $34,999
+        IK6M008:     With income: $35,000 to $49,999
+        IK6M009:     With income: $50,000 to $64,999
+        IK6M010:     With income: $65,000 to $74,999
+        IK6M011:     With income: $75,000 or more
+        IK6M012:     Born in state of residence
+        IK6M013:     Born in state of residence: No income
+        IK6M014:     Born in state of residence: With income
+        IK6M015:     Born in state of residence: With income: $1 to $9,999 or loss
+        IK6M016:     Born in state of residence: With income: $10,000 to $14,999
+        IK6M017:     Born in state of residence: With income: $15,000 to $24,999
+        IK6M018:     Born in state of residence: With income: $25,000 to $34,999
+        IK6M019:     Born in state of residence: With income: $35,000 to $49,999
+        IK6M020:     Born in state of residence: With income: $50,000 to $64,999
+        IK6M021:     Born in state of residence: With income: $65,000 to $74,999
+        IK6M022:     Born in state of residence: With income: $75,000 or more
+        IK6M023:     Born in other state in the United States
+        IK6M024:     Born in other state in the United States: No income
+        IK6M025:     Born in other state in the United States: With income
+        IK6M026:     Born in other state in the United States: With income: $1 to $9,999 or loss
+        IK6M027:     Born in other state in the United States: With income: $10,000 to $14,999
+        IK6M028:     Born in other state in the United States: With income: $15,000 to $24,999
+        IK6M029:     Born in other state in the United States: With income: $25,000 to $34,999
+        IK6M030:     Born in other state in the United States: With income: $35,000 to $49,999
+        IK6M031:     Born in other state in the United States: With income: $50,000 to $64,999
+        IK6M032:     Born in other state in the United States: With income: $65,000 to $74,999
+        IK6M033:     Born in other state in the United States: With income: $75,000 or more
+        IK6M034:     Native; born outside the United States
+        IK6M035:     Native; born outside the United States: No income
+        IK6M036:     Native; born outside the United States: With income
+        IK6M037:     Native; born outside the United States: With income: $1 to $9,999 or loss
+        IK6M038:     Native; born outside the United States: With income: $10,000 to $14,999
+        IK6M039:     Native; born outside the United States: With income: $15,000 to $24,999
+        IK6M040:     Native; born outside the United States: With income: $25,000 to $34,999
+        IK6M041:     Native; born outside the United States: With income: $35,000 to $49,999
+        IK6M042:     Native; born outside the United States: With income: $50,000 to $64,999
+        IK6M043:     Native; born outside the United States: With income: $65,000 to $74,999
+        IK6M044:     Native; born outside the United States: With income: $75,000 or more
+        IK6M045:     Foreign born
+        IK6M046:     Foreign born: No income
+        IK6M047:     Foreign born: With income
+        IK6M048:     Foreign born: With income: $1 to $9,999 or loss
+        IK6M049:     Foreign born: With income: $10,000 to $14,999
+        IK6M050:     Foreign born: With income: $15,000 to $24,999
+        IK6M051:     Foreign born: With income: $25,000 to $34,999
+        IK6M052:     Foreign born: With income: $35,000 to $49,999
+        IK6M053:     Foreign born: With income: $50,000 to $64,999
+        IK6M054:     Foreign born: With income: $65,000 to $74,999
+        IK6M055:     Foreign born: With income: $75,000 or more
+ 
+    Table 5:     Means of Transportation to Work
+    Universe:    Workers 16 years and over
+    Source code: C08301
+    NHGIS code:  IQB
+        IQBM001:     Total
+        IQBM002:     Car, truck, or van
+        IQBM003:     Car, truck, or van: Drove alone
+        IQBM004:     Car, truck, or van: Carpooled
+        IQBM005:     Car, truck, or van: Carpooled: In 2-person carpool
+        IQBM006:     Car, truck, or van: Carpooled: In 3-person carpool
+        IQBM007:     Car, truck, or van: Carpooled: In 4-or-more-person carpool
+        IQBM008:     Public transportation (excluding taxicab)
+        IQBM009:     Walked
+        IQBM010:     Taxicab, motorcycle, bicycle, or other means
+        IQBM011:     Worked at home
+ 
+    Table 6:     Travel Time to Work
+    Universe:    Workers 16 years and over who did not work at home
+    Source code: B08303
+    NHGIS code:  IQE
+        IQEM001:     Total
+        IQEM002:     Less than 5 minutes
+        IQEM003:     5 to 9 minutes
+        IQEM004:     10 to 14 minutes
+        IQEM005:     15 to 19 minutes
+        IQEM006:     20 to 24 minutes
+        IQEM007:     25 to 29 minutes
+        IQEM008:     30 to 34 minutes
+        IQEM009:     35 to 39 minutes
+        IQEM010:     40 to 44 minutes
+        IQEM011:     45 to 59 minutes
+        IQEM012:     60 to 89 minutes
+        IQEM013:     90 or more minutes
+ 
+    Table 7:     Household Type by Household Size
+    Universe:    Households
+    Source code: B11016
+    NHGIS code:  IUJ
+        IUJM001:     Total
+        IUJM002:     Family households
+        IUJM003:     Family households: 2-person household
+        IUJM004:     Family households: 3-person household
+        IUJM005:     Family households: 4-person household
+        IUJM006:     Family households: 5-person household
+        IUJM007:     Family households: 6-person household
+        IUJM008:     Family households: 7-or-more person household
+        IUJM009:     Nonfamily households
+        IUJM010:     Nonfamily households: 1-person household
+        IUJM011:     Nonfamily households: 2-person household
+        IUJM012:     Nonfamily households: 3-person household
+        IUJM013:     Nonfamily households: 4-person household
+        IUJM014:     Nonfamily households: 5-person household
+        IUJM015:     Nonfamily households: 6-person household
+        IUJM016:     Nonfamily households: 7-or-more person household
+ 
+    Table 8:     Educational Attainment for the Population 25 Years and Over
+    Universe:    Population 25 years and over
+    Source code: C15003
+    NHGIS code:  IXN
+        IXNM001:     Total
+        IXNM002:     No schooling completed
+        IXNM003:     Nursery to 4th grade
+        IXNM004:     5th and 6th grade
+        IXNM005:     7th and 8th grade
+        IXNM006:     9th grade
+        IXNM007:     10th grade
+        IXNM008:     11th grade
+        IXNM009:     12th grade, no diploma
+        IXNM010:     Regular high school diploma
+        IXNM011:     GED or alternative credential
+        IXNM012:     Some college, less than 1 year
+        IXNM013:     Some college, 1 or more years, no degree
+        IXNM014:     Associate's degree
+        IXNM015:     Bachelor's degree
+        IXNM016:     Master's degree
+        IXNM017:     Professional school degree
+        IXNM018:     Doctorate degree
+ 
+    Table 9:     Employment Status by Disability Status
+    Universe:    Civilian noninstitutionalized population 18 to 64 years
+    Source code: C18120
+    NHGIS code:  I2C
+        I2CM001:     Total
+        I2CM002:     In the labor force
+        I2CM003:     In the labor force: Employed
+        I2CM004:     In the labor force: Employed: With a disability
+        I2CM005:     In the labor force: Employed: No disability
+        I2CM006:     In the labor force: Unemployed
+        I2CM007:     In the labor force: Unemployed: With a disability
+        I2CM008:     In the labor force: Unemployed: No disability
+        I2CM009:     Not in labor force
+        I2CM010:     Not in labor force: With a disability
+        I2CM011:     Not in labor force: No disability
+ 
+    Table 10:    Household Income in the Past 12 Months (in 2010 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19001
+    NHGIS code:  I2L
+        I2LM001:     Total
+        I2LM002:     Less than $10,000
+        I2LM003:     $10,000 to $14,999
+        I2LM004:     $15,000 to $19,999
+        I2LM005:     $20,000 to $24,999
+        I2LM006:     $25,000 to $29,999
+        I2LM007:     $30,000 to $34,999
+        I2LM008:     $35,000 to $39,999
+        I2LM009:     $40,000 to $44,999
+        I2LM010:     $45,000 to $49,999
+        I2LM011:     $50,000 to $59,999
+        I2LM012:     $60,000 to $74,999
+        I2LM013:     $75,000 to $99,999
+        I2LM014:     $100,000 to $124,999
+        I2LM015:     $125,000 to $149,999
+        I2LM016:     $150,000 to $199,999
+        I2LM017:     $200,000 or more
+ 
+    Table 11:    Types of Health Insurance Coverage by Age
+    Universe:    Civilian noninstitutionalized population
+    Source code: C27010
+    NHGIS code:  JIG
+        JIGM001:     Total
+        JIGM002:     Under 18 years
+        JIGM003:     Under 18 years: With private health insurance only
+        JIGM004:     Under 18 years: With public coverage only
+        JIGM005:     Under 18 years: With both private and public coverage
+        JIGM006:     Under 18 years: No health insurance coverage
+        JIGM007:     18 to 34 years
+        JIGM008:     18 to 34 years: With private health insurance only
+        JIGM009:     18 to 34 years: With public coverage only
+        JIGM010:     18 to 34 years: With both private and public coverage
+        JIGM011:     18 to 34 years: No health insurance coverage
+        JIGM012:     35 to 64 years
+        JIGM013:     35 to 64 years: With private health insurance only
+        JIGM014:     35 to 64 years: With public coverage only
+        JIGM015:     35 to 64 years: With both private and public coverage
+        JIGM016:     35 to 64 years: No health insurance coverage
+        JIGM017:     65 years and over
+        JIGM018:     65 years and over: With private health insurance only
+        JIGM019:     65 years and over: With public coverage only
+        JIGM020:     65 years and over: With both private and public coverage
+        JIGM021:     65 years and over: No health insurance coverage
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+  data related to a particular publication. Contact us for permission for any other 
+  redistribution; we will consider requests for free and commercial redistribution.
+
+* CITATION: You will cite NHGIS appropriately.
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+      should include the following citation:
+
+        Steven Manson, Jonathan Schroeder, David Van Riper, and Steven Ruggles. 
+        IPUMS National Historical Geographic Information System: Version 13.0 
+        [Database]. Minneapolis: University of Minnesota. 2018. 
+        http://doi.org/10.18128/D050.V13.0
+
+    * Publications and research reports employing school attendance areas data 
+      (either tabular or GIS) must cite it appropriately. The citation should 
+      include the following:
+
+        The College of William and Mary and the Minnesota Population Center.
+        School Attendance Boundary Information System (SABINS): Version 1.0.
+        Minneapolis, MN: University of Minnesota 2011.
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+      recommend that you cite the use of NHGIS data as follows:
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+    * If possible, citations involving school attendance areas should also include
+      the URL for the SABINS site:
+
+        http://www.sabinsdata.org/.
+
+These terms of use are a legally binding agreement. You can use the data only in 
+accordance with these terms, and any other use is a violation of the agreement. 
+Violations may result in revocation of the agreement and prohibition from using other 
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+responsible for all damages, including reasonable attorney's fees and expenses.
+        
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+
+Send electronic material to: nhgis@umn.edu
+
+Printed matter should be sent to:
+
+    IPUMS NHGIS
+    Institute for Social Research and Data Innovation
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455

@@ -1,0 +1,737 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'nhgis0015_ds205_2014_county'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             2014
+Geographic level: County (by State)
+Dataset:          2014 American Community Survey: 1-Year Data
+   NHGIS code:    2014_ACS1
+   NHGIS ID:      ds205
+Breakdown(s):     Geographic Subarea:
+                     Total area (00)
+Data type(s):     (E) Estimates
+                  (M) Margins of error
+ 
+Tables:
+ 
+1. Sex by Age
+   Universe:    Total population
+   Source code: B01001
+   NHGIS code:  AAAC
+ 
+2. Total Population
+   Universe:    Total population
+   Source code: B01003
+   NHGIS code:  AAA5
+ 
+3. Race
+   Universe:    Total population
+   Source code: B02001
+   NHGIS code:  AAA6
+ 
+4. Place of Birth by Individual Income in the Past 12 Months (in 2014 Inflation-Adjusted Dollars) in the United States
+   Universe:    Population 15 years and over in the United States
+   Source code: B06010
+   NHGIS code:  AADY
+ 
+5. Means of Transportation to Work
+   Universe:    Workers 16 years and over
+   Source code: C08301
+   NHGIS code:  AAIF
+ 
+6. Travel Time to Work
+   Universe:    Workers 16 years and over who did not work at home
+   Source code: B08303
+   NHGIS code:  AAIH
+ 
+7. Household Type by Household Size
+   Universe:    Households
+   Source code: B11016
+   NHGIS code:  AALO
+ 
+8. Educational Attainment for the Population 25 Years and Over
+   Universe:    Population 25 years and over
+   Source code: C15003
+   NHGIS code:  AAOF
+ 
+9. Employment Status by Disability Status
+   Universe:    Civilian noninstitutionalized population 18 to 64 years
+   Source code: C18120
+   NHGIS code:  AASW
+ 
+10. Household Income in the Past 12 Months (in 2014 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19001
+    NHGIS code:  AAS5
+ 
+11. Types of Health Insurance Coverage by Age
+    Universe:    Civilian noninstitutionalized population
+    Source code: C27010
+    NHGIS code:  AA6L
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        REGIONA:     Region Code
+        DIVISIONA:   Division Code
+        STATE:       State Name
+        STATEA:      State Code
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        COUSUBA:     County Subdivision Code
+        PLACEA:      Place Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        ANRCA:       Alaska Native Regional Corporation Code
+        CBSAA:       Metropolitan Statistical Area/Micropolitan Statistical Area Code
+        CSAA:        Combined Statistical Area Code
+        METDIVA:     Metropolitan Division Code
+        NECTAA:      New England City and Town Area Code
+        CNECTAA:     Combined New England City and Town Area Code
+        NECTADIVA:   New England City and Town Area Division Code
+        UAA:         Urban Area Code
+        CDCURRA:     Congressional District (2013-2017, 113th-114th Congress) Code
+        SDELMA:      School District (Elementary)/Remainder Code
+        SDSECA:      School District (Secondary)/Remainder Code
+        SDUNIA:      School District (Unified)/Remainder Code
+        PUMA5A:      Public Use Microdata Sample Area (PUMA) Code
+ 
+Data Type (E):
+    Estimates
+ 
+        NAME_E:      Area Name
+ 
+    Table 1:     Sex by Age
+    Universe:    Total population
+    Source code: B01001
+    NHGIS code:  AAAC
+        AAACE001:    Total
+        AAACE002:    Male
+        AAACE003:    Male: Under 5 years
+        AAACE004:    Male: 5 to 9 years
+        AAACE005:    Male: 10 to 14 years
+        AAACE006:    Male: 15 to 17 years
+        AAACE007:    Male: 18 and 19 years
+        AAACE008:    Male: 20 years
+        AAACE009:    Male: 21 years
+        AAACE010:    Male: 22 to 24 years
+        AAACE011:    Male: 25 to 29 years
+        AAACE012:    Male: 30 to 34 years
+        AAACE013:    Male: 35 to 39 years
+        AAACE014:    Male: 40 to 44 years
+        AAACE015:    Male: 45 to 49 years
+        AAACE016:    Male: 50 to 54 years
+        AAACE017:    Male: 55 to 59 years
+        AAACE018:    Male: 60 and 61 years
+        AAACE019:    Male: 62 to 64 years
+        AAACE020:    Male: 65 and 66 years
+        AAACE021:    Male: 67 to 69 years
+        AAACE022:    Male: 70 to 74 years
+        AAACE023:    Male: 75 to 79 years
+        AAACE024:    Male: 80 to 84 years
+        AAACE025:    Male: 85 years and over
+        AAACE026:    Female
+        AAACE027:    Female: Under 5 years
+        AAACE028:    Female: 5 to 9 years
+        AAACE029:    Female: 10 to 14 years
+        AAACE030:    Female: 15 to 17 years
+        AAACE031:    Female: 18 and 19 years
+        AAACE032:    Female: 20 years
+        AAACE033:    Female: 21 years
+        AAACE034:    Female: 22 to 24 years
+        AAACE035:    Female: 25 to 29 years
+        AAACE036:    Female: 30 to 34 years
+        AAACE037:    Female: 35 to 39 years
+        AAACE038:    Female: 40 to 44 years
+        AAACE039:    Female: 45 to 49 years
+        AAACE040:    Female: 50 to 54 years
+        AAACE041:    Female: 55 to 59 years
+        AAACE042:    Female: 60 and 61 years
+        AAACE043:    Female: 62 to 64 years
+        AAACE044:    Female: 65 and 66 years
+        AAACE045:    Female: 67 to 69 years
+        AAACE046:    Female: 70 to 74 years
+        AAACE047:    Female: 75 to 79 years
+        AAACE048:    Female: 80 to 84 years
+        AAACE049:    Female: 85 years and over
+ 
+    Table 2:     Total Population
+    Universe:    Total population
+    Source code: B01003
+    NHGIS code:  AAA5
+        AAA5E001:    Total
+ 
+    Table 3:     Race
+    Universe:    Total population
+    Source code: B02001
+    NHGIS code:  AAA6
+        AAA6E001:    Total
+        AAA6E002:    White alone
+        AAA6E003:    Black or African American alone
+        AAA6E004:    American Indian and Alaska Native alone
+        AAA6E005:    Asian alone
+        AAA6E006:    Native Hawaiian and Other Pacific Islander alone
+        AAA6E007:    Some other race alone
+        AAA6E008:    Two or more races
+        AAA6E009:    Two or more races: Two races including Some other race
+        AAA6E010:    Two or more races: Two races excluding Some other race, and three or more races
+ 
+    Table 4:     Place of Birth by Individual Income in the Past 12 Months (in 2014 Inflation-Adjusted Dollars) in the United States
+    Universe:    Population 15 years and over in the United States
+    Source code: B06010
+    NHGIS code:  AADY
+        AADYE001:    Total
+        AADYE002:    No income
+        AADYE003:    With income
+        AADYE004:    With income: $1 to $9,999 or loss
+        AADYE005:    With income: $10,000 to $14,999
+        AADYE006:    With income: $15,000 to $24,999
+        AADYE007:    With income: $25,000 to $34,999
+        AADYE008:    With income: $35,000 to $49,999
+        AADYE009:    With income: $50,000 to $64,999
+        AADYE010:    With income: $65,000 to $74,999
+        AADYE011:    With income: $75,000 or more
+        AADYE012:    Born in state of residence
+        AADYE013:    Born in state of residence: No income
+        AADYE014:    Born in state of residence: With income
+        AADYE015:    Born in state of residence: With income: $1 to $9,999 or loss
+        AADYE016:    Born in state of residence: With income: $10,000 to $14,999
+        AADYE017:    Born in state of residence: With income: $15,000 to $24,999
+        AADYE018:    Born in state of residence: With income: $25,000 to $34,999
+        AADYE019:    Born in state of residence: With income: $35,000 to $49,999
+        AADYE020:    Born in state of residence: With income: $50,000 to $64,999
+        AADYE021:    Born in state of residence: With income: $65,000 to $74,999
+        AADYE022:    Born in state of residence: With income: $75,000 or more
+        AADYE023:    Born in other state in the United States
+        AADYE024:    Born in other state in the United States: No income
+        AADYE025:    Born in other state in the United States: With income
+        AADYE026:    Born in other state in the United States: With income: $1 to $9,999 or loss
+        AADYE027:    Born in other state in the United States: With income: $10,000 to $14,999
+        AADYE028:    Born in other state in the United States: With income: $15,000 to $24,999
+        AADYE029:    Born in other state in the United States: With income: $25,000 to $34,999
+        AADYE030:    Born in other state in the United States: With income: $35,000 to $49,999
+        AADYE031:    Born in other state in the United States: With income: $50,000 to $64,999
+        AADYE032:    Born in other state in the United States: With income: $65,000 to $74,999
+        AADYE033:    Born in other state in the United States: With income: $75,000 or more
+        AADYE034:    Native; born outside the United States
+        AADYE035:    Native; born outside the United States: No income
+        AADYE036:    Native; born outside the United States: With income
+        AADYE037:    Native; born outside the United States: With income: $1 to $9,999 or loss
+        AADYE038:    Native; born outside the United States: With income: $10,000 to $14,999
+        AADYE039:    Native; born outside the United States: With income: $15,000 to $24,999
+        AADYE040:    Native; born outside the United States: With income: $25,000 to $34,999
+        AADYE041:    Native; born outside the United States: With income: $35,000 to $49,999
+        AADYE042:    Native; born outside the United States: With income: $50,000 to $64,999
+        AADYE043:    Native; born outside the United States: With income: $65,000 to $74,999
+        AADYE044:    Native; born outside the United States: With income: $75,000 or more
+        AADYE045:    Foreign born
+        AADYE046:    Foreign born: No income
+        AADYE047:    Foreign born: With income
+        AADYE048:    Foreign born: With income: $1 to $9,999 or loss
+        AADYE049:    Foreign born: With income: $10,000 to $14,999
+        AADYE050:    Foreign born: With income: $15,000 to $24,999
+        AADYE051:    Foreign born: With income: $25,000 to $34,999
+        AADYE052:    Foreign born: With income: $35,000 to $49,999
+        AADYE053:    Foreign born: With income: $50,000 to $64,999
+        AADYE054:    Foreign born: With income: $65,000 to $74,999
+        AADYE055:    Foreign born: With income: $75,000 or more
+ 
+    Table 5:     Means of Transportation to Work
+    Universe:    Workers 16 years and over
+    Source code: C08301
+    NHGIS code:  AAIF
+        AAIFE001:    Total
+        AAIFE002:    Car, truck, or van
+        AAIFE003:    Car, truck, or van: Drove alone
+        AAIFE004:    Car, truck, or van: Carpooled
+        AAIFE005:    Car, truck, or van: Carpooled: In 2-person carpool
+        AAIFE006:    Car, truck, or van: Carpooled: In 3-person carpool
+        AAIFE007:    Car, truck, or van: Carpooled: In 4-or-more-person carpool
+        AAIFE008:    Public transportation (excluding taxicab)
+        AAIFE009:    Walked
+        AAIFE010:    Taxicab, motorcycle, bicycle, or other means
+        AAIFE011:    Worked at home
+ 
+    Table 6:     Travel Time to Work
+    Universe:    Workers 16 years and over who did not work at home
+    Source code: B08303
+    NHGIS code:  AAIH
+        AAIHE001:    Total
+        AAIHE002:    Less than 5 minutes
+        AAIHE003:    5 to 9 minutes
+        AAIHE004:    10 to 14 minutes
+        AAIHE005:    15 to 19 minutes
+        AAIHE006:    20 to 24 minutes
+        AAIHE007:    25 to 29 minutes
+        AAIHE008:    30 to 34 minutes
+        AAIHE009:    35 to 39 minutes
+        AAIHE010:    40 to 44 minutes
+        AAIHE011:    45 to 59 minutes
+        AAIHE012:    60 to 89 minutes
+        AAIHE013:    90 or more minutes
+ 
+    Table 7:     Household Type by Household Size
+    Universe:    Households
+    Source code: B11016
+    NHGIS code:  AALO
+        AALOE001:    Total
+        AALOE002:    Family households
+        AALOE003:    Family households: 2-person household
+        AALOE004:    Family households: 3-person household
+        AALOE005:    Family households: 4-person household
+        AALOE006:    Family households: 5-person household
+        AALOE007:    Family households: 6-person household
+        AALOE008:    Family households: 7-or-more person household
+        AALOE009:    Nonfamily households
+        AALOE010:    Nonfamily households: 1-person household
+        AALOE011:    Nonfamily households: 2-person household
+        AALOE012:    Nonfamily households: 3-person household
+        AALOE013:    Nonfamily households: 4-person household
+        AALOE014:    Nonfamily households: 5-person household
+        AALOE015:    Nonfamily households: 6-person household
+        AALOE016:    Nonfamily households: 7-or-more person household
+ 
+    Table 8:     Educational Attainment for the Population 25 Years and Over
+    Universe:    Population 25 years and over
+    Source code: C15003
+    NHGIS code:  AAOF
+        AAOFE001:    Total
+        AAOFE002:    No schooling completed
+        AAOFE003:    Nursery to 4th grade
+        AAOFE004:    5th and 6th grade
+        AAOFE005:    7th and 8th grade
+        AAOFE006:    9th grade
+        AAOFE007:    10th grade
+        AAOFE008:    11th grade
+        AAOFE009:    12th grade, no diploma
+        AAOFE010:    Regular high school diploma
+        AAOFE011:    GED or alternative credential
+        AAOFE012:    Some college, less than 1 year
+        AAOFE013:    Some college, 1 or more years, no degree
+        AAOFE014:    Associate's degree
+        AAOFE015:    Bachelor's degree
+        AAOFE016:    Master's degree
+        AAOFE017:    Professional school degree
+        AAOFE018:    Doctorate degree
+ 
+    Table 9:     Employment Status by Disability Status
+    Universe:    Civilian noninstitutionalized population 18 to 64 years
+    Source code: C18120
+    NHGIS code:  AASW
+        AASWE001:    Total
+        AASWE002:    In the labor force
+        AASWE003:    In the labor force: Employed
+        AASWE004:    In the labor force: Employed: With a disability
+        AASWE005:    In the labor force: Employed: No disability
+        AASWE006:    In the labor force: Unemployed
+        AASWE007:    In the labor force: Unemployed: With a disability
+        AASWE008:    In the labor force: Unemployed: No disability
+        AASWE009:    Not in labor force
+        AASWE010:    Not in labor force: With a disability
+        AASWE011:    Not in labor force: No disability
+ 
+    Table 10:    Household Income in the Past 12 Months (in 2014 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19001
+    NHGIS code:  AAS5
+        AAS5E001:    Total
+        AAS5E002:    Less than $10,000
+        AAS5E003:    $10,000 to $14,999
+        AAS5E004:    $15,000 to $19,999
+        AAS5E005:    $20,000 to $24,999
+        AAS5E006:    $25,000 to $29,999
+        AAS5E007:    $30,000 to $34,999
+        AAS5E008:    $35,000 to $39,999
+        AAS5E009:    $40,000 to $44,999
+        AAS5E010:    $45,000 to $49,999
+        AAS5E011:    $50,000 to $59,999
+        AAS5E012:    $60,000 to $74,999
+        AAS5E013:    $75,000 to $99,999
+        AAS5E014:    $100,000 to $124,999
+        AAS5E015:    $125,000 to $149,999
+        AAS5E016:    $150,000 to $199,999
+        AAS5E017:    $200,000 or more
+ 
+    Table 11:    Types of Health Insurance Coverage by Age
+    Universe:    Civilian noninstitutionalized population
+    Source code: C27010
+    NHGIS code:  AA6L
+        AA6LE001:    Total
+        AA6LE002:    Under 18 years
+        AA6LE003:    Under 18 years: With private health insurance only
+        AA6LE004:    Under 18 years: With public coverage only
+        AA6LE005:    Under 18 years: With both private and public coverage
+        AA6LE006:    Under 18 years: No health insurance coverage
+        AA6LE007:    18 to 34 years
+        AA6LE008:    18 to 34 years: With private health insurance only
+        AA6LE009:    18 to 34 years: With public coverage only
+        AA6LE010:    18 to 34 years: With both private and public coverage
+        AA6LE011:    18 to 34 years: No health insurance coverage
+        AA6LE012:    35 to 64 years
+        AA6LE013:    35 to 64 years: With private health insurance only
+        AA6LE014:    35 to 64 years: With public coverage only
+        AA6LE015:    35 to 64 years: With both private and public coverage
+        AA6LE016:    35 to 64 years: No health insurance coverage
+        AA6LE017:    65 years and over
+        AA6LE018:    65 years and over: With private health insurance only
+        AA6LE019:    65 years and over: With public coverage only
+        AA6LE020:    65 years and over: With both private and public coverage
+        AA6LE021:    65 years and over: No health insurance coverage
+ 
+Data Type (M):
+    Margins of error
+ 
+        NAME_M:      Area Name
+ 
+    Table 1:     Sex by Age
+    Universe:    Total population
+    Source code: B01001
+    NHGIS code:  AAAC
+        AAACM001:    Total
+        AAACM002:    Male
+        AAACM003:    Male: Under 5 years
+        AAACM004:    Male: 5 to 9 years
+        AAACM005:    Male: 10 to 14 years
+        AAACM006:    Male: 15 to 17 years
+        AAACM007:    Male: 18 and 19 years
+        AAACM008:    Male: 20 years
+        AAACM009:    Male: 21 years
+        AAACM010:    Male: 22 to 24 years
+        AAACM011:    Male: 25 to 29 years
+        AAACM012:    Male: 30 to 34 years
+        AAACM013:    Male: 35 to 39 years
+        AAACM014:    Male: 40 to 44 years
+        AAACM015:    Male: 45 to 49 years
+        AAACM016:    Male: 50 to 54 years
+        AAACM017:    Male: 55 to 59 years
+        AAACM018:    Male: 60 and 61 years
+        AAACM019:    Male: 62 to 64 years
+        AAACM020:    Male: 65 and 66 years
+        AAACM021:    Male: 67 to 69 years
+        AAACM022:    Male: 70 to 74 years
+        AAACM023:    Male: 75 to 79 years
+        AAACM024:    Male: 80 to 84 years
+        AAACM025:    Male: 85 years and over
+        AAACM026:    Female
+        AAACM027:    Female: Under 5 years
+        AAACM028:    Female: 5 to 9 years
+        AAACM029:    Female: 10 to 14 years
+        AAACM030:    Female: 15 to 17 years
+        AAACM031:    Female: 18 and 19 years
+        AAACM032:    Female: 20 years
+        AAACM033:    Female: 21 years
+        AAACM034:    Female: 22 to 24 years
+        AAACM035:    Female: 25 to 29 years
+        AAACM036:    Female: 30 to 34 years
+        AAACM037:    Female: 35 to 39 years
+        AAACM038:    Female: 40 to 44 years
+        AAACM039:    Female: 45 to 49 years
+        AAACM040:    Female: 50 to 54 years
+        AAACM041:    Female: 55 to 59 years
+        AAACM042:    Female: 60 and 61 years
+        AAACM043:    Female: 62 to 64 years
+        AAACM044:    Female: 65 and 66 years
+        AAACM045:    Female: 67 to 69 years
+        AAACM046:    Female: 70 to 74 years
+        AAACM047:    Female: 75 to 79 years
+        AAACM048:    Female: 80 to 84 years
+        AAACM049:    Female: 85 years and over
+ 
+    Table 2:     Total Population
+    Universe:    Total population
+    Source code: B01003
+    NHGIS code:  AAA5
+        AAA5M001:    Total
+ 
+    Table 3:     Race
+    Universe:    Total population
+    Source code: B02001
+    NHGIS code:  AAA6
+        AAA6M001:    Total
+        AAA6M002:    White alone
+        AAA6M003:    Black or African American alone
+        AAA6M004:    American Indian and Alaska Native alone
+        AAA6M005:    Asian alone
+        AAA6M006:    Native Hawaiian and Other Pacific Islander alone
+        AAA6M007:    Some other race alone
+        AAA6M008:    Two or more races
+        AAA6M009:    Two or more races: Two races including Some other race
+        AAA6M010:    Two or more races: Two races excluding Some other race, and three or more races
+ 
+    Table 4:     Place of Birth by Individual Income in the Past 12 Months (in 2014 Inflation-Adjusted Dollars) in the United States
+    Universe:    Population 15 years and over in the United States
+    Source code: B06010
+    NHGIS code:  AADY
+        AADYM001:    Total
+        AADYM002:    No income
+        AADYM003:    With income
+        AADYM004:    With income: $1 to $9,999 or loss
+        AADYM005:    With income: $10,000 to $14,999
+        AADYM006:    With income: $15,000 to $24,999
+        AADYM007:    With income: $25,000 to $34,999
+        AADYM008:    With income: $35,000 to $49,999
+        AADYM009:    With income: $50,000 to $64,999
+        AADYM010:    With income: $65,000 to $74,999
+        AADYM011:    With income: $75,000 or more
+        AADYM012:    Born in state of residence
+        AADYM013:    Born in state of residence: No income
+        AADYM014:    Born in state of residence: With income
+        AADYM015:    Born in state of residence: With income: $1 to $9,999 or loss
+        AADYM016:    Born in state of residence: With income: $10,000 to $14,999
+        AADYM017:    Born in state of residence: With income: $15,000 to $24,999
+        AADYM018:    Born in state of residence: With income: $25,000 to $34,999
+        AADYM019:    Born in state of residence: With income: $35,000 to $49,999
+        AADYM020:    Born in state of residence: With income: $50,000 to $64,999
+        AADYM021:    Born in state of residence: With income: $65,000 to $74,999
+        AADYM022:    Born in state of residence: With income: $75,000 or more
+        AADYM023:    Born in other state in the United States
+        AADYM024:    Born in other state in the United States: No income
+        AADYM025:    Born in other state in the United States: With income
+        AADYM026:    Born in other state in the United States: With income: $1 to $9,999 or loss
+        AADYM027:    Born in other state in the United States: With income: $10,000 to $14,999
+        AADYM028:    Born in other state in the United States: With income: $15,000 to $24,999
+        AADYM029:    Born in other state in the United States: With income: $25,000 to $34,999
+        AADYM030:    Born in other state in the United States: With income: $35,000 to $49,999
+        AADYM031:    Born in other state in the United States: With income: $50,000 to $64,999
+        AADYM032:    Born in other state in the United States: With income: $65,000 to $74,999
+        AADYM033:    Born in other state in the United States: With income: $75,000 or more
+        AADYM034:    Native; born outside the United States
+        AADYM035:    Native; born outside the United States: No income
+        AADYM036:    Native; born outside the United States: With income
+        AADYM037:    Native; born outside the United States: With income: $1 to $9,999 or loss
+        AADYM038:    Native; born outside the United States: With income: $10,000 to $14,999
+        AADYM039:    Native; born outside the United States: With income: $15,000 to $24,999
+        AADYM040:    Native; born outside the United States: With income: $25,000 to $34,999
+        AADYM041:    Native; born outside the United States: With income: $35,000 to $49,999
+        AADYM042:    Native; born outside the United States: With income: $50,000 to $64,999
+        AADYM043:    Native; born outside the United States: With income: $65,000 to $74,999
+        AADYM044:    Native; born outside the United States: With income: $75,000 or more
+        AADYM045:    Foreign born
+        AADYM046:    Foreign born: No income
+        AADYM047:    Foreign born: With income
+        AADYM048:    Foreign born: With income: $1 to $9,999 or loss
+        AADYM049:    Foreign born: With income: $10,000 to $14,999
+        AADYM050:    Foreign born: With income: $15,000 to $24,999
+        AADYM051:    Foreign born: With income: $25,000 to $34,999
+        AADYM052:    Foreign born: With income: $35,000 to $49,999
+        AADYM053:    Foreign born: With income: $50,000 to $64,999
+        AADYM054:    Foreign born: With income: $65,000 to $74,999
+        AADYM055:    Foreign born: With income: $75,000 or more
+ 
+    Table 5:     Means of Transportation to Work
+    Universe:    Workers 16 years and over
+    Source code: C08301
+    NHGIS code:  AAIF
+        AAIFM001:    Total
+        AAIFM002:    Car, truck, or van
+        AAIFM003:    Car, truck, or van: Drove alone
+        AAIFM004:    Car, truck, or van: Carpooled
+        AAIFM005:    Car, truck, or van: Carpooled: In 2-person carpool
+        AAIFM006:    Car, truck, or van: Carpooled: In 3-person carpool
+        AAIFM007:    Car, truck, or van: Carpooled: In 4-or-more-person carpool
+        AAIFM008:    Public transportation (excluding taxicab)
+        AAIFM009:    Walked
+        AAIFM010:    Taxicab, motorcycle, bicycle, or other means
+        AAIFM011:    Worked at home
+ 
+    Table 6:     Travel Time to Work
+    Universe:    Workers 16 years and over who did not work at home
+    Source code: B08303
+    NHGIS code:  AAIH
+        AAIHM001:    Total
+        AAIHM002:    Less than 5 minutes
+        AAIHM003:    5 to 9 minutes
+        AAIHM004:    10 to 14 minutes
+        AAIHM005:    15 to 19 minutes
+        AAIHM006:    20 to 24 minutes
+        AAIHM007:    25 to 29 minutes
+        AAIHM008:    30 to 34 minutes
+        AAIHM009:    35 to 39 minutes
+        AAIHM010:    40 to 44 minutes
+        AAIHM011:    45 to 59 minutes
+        AAIHM012:    60 to 89 minutes
+        AAIHM013:    90 or more minutes
+ 
+    Table 7:     Household Type by Household Size
+    Universe:    Households
+    Source code: B11016
+    NHGIS code:  AALO
+        AALOM001:    Total
+        AALOM002:    Family households
+        AALOM003:    Family households: 2-person household
+        AALOM004:    Family households: 3-person household
+        AALOM005:    Family households: 4-person household
+        AALOM006:    Family households: 5-person household
+        AALOM007:    Family households: 6-person household
+        AALOM008:    Family households: 7-or-more person household
+        AALOM009:    Nonfamily households
+        AALOM010:    Nonfamily households: 1-person household
+        AALOM011:    Nonfamily households: 2-person household
+        AALOM012:    Nonfamily households: 3-person household
+        AALOM013:    Nonfamily households: 4-person household
+        AALOM014:    Nonfamily households: 5-person household
+        AALOM015:    Nonfamily households: 6-person household
+        AALOM016:    Nonfamily households: 7-or-more person household
+ 
+    Table 8:     Educational Attainment for the Population 25 Years and Over
+    Universe:    Population 25 years and over
+    Source code: C15003
+    NHGIS code:  AAOF
+        AAOFM001:    Total
+        AAOFM002:    No schooling completed
+        AAOFM003:    Nursery to 4th grade
+        AAOFM004:    5th and 6th grade
+        AAOFM005:    7th and 8th grade
+        AAOFM006:    9th grade
+        AAOFM007:    10th grade
+        AAOFM008:    11th grade
+        AAOFM009:    12th grade, no diploma
+        AAOFM010:    Regular high school diploma
+        AAOFM011:    GED or alternative credential
+        AAOFM012:    Some college, less than 1 year
+        AAOFM013:    Some college, 1 or more years, no degree
+        AAOFM014:    Associate's degree
+        AAOFM015:    Bachelor's degree
+        AAOFM016:    Master's degree
+        AAOFM017:    Professional school degree
+        AAOFM018:    Doctorate degree
+ 
+    Table 9:     Employment Status by Disability Status
+    Universe:    Civilian noninstitutionalized population 18 to 64 years
+    Source code: C18120
+    NHGIS code:  AASW
+        AASWM001:    Total
+        AASWM002:    In the labor force
+        AASWM003:    In the labor force: Employed
+        AASWM004:    In the labor force: Employed: With a disability
+        AASWM005:    In the labor force: Employed: No disability
+        AASWM006:    In the labor force: Unemployed
+        AASWM007:    In the labor force: Unemployed: With a disability
+        AASWM008:    In the labor force: Unemployed: No disability
+        AASWM009:    Not in labor force
+        AASWM010:    Not in labor force: With a disability
+        AASWM011:    Not in labor force: No disability
+ 
+    Table 10:    Household Income in the Past 12 Months (in 2014 Inflation-Adjusted Dollars)
+    Universe:    Households
+    Source code: B19001
+    NHGIS code:  AAS5
+        AAS5M001:    Total
+        AAS5M002:    Less than $10,000
+        AAS5M003:    $10,000 to $14,999
+        AAS5M004:    $15,000 to $19,999
+        AAS5M005:    $20,000 to $24,999
+        AAS5M006:    $25,000 to $29,999
+        AAS5M007:    $30,000 to $34,999
+        AAS5M008:    $35,000 to $39,999
+        AAS5M009:    $40,000 to $44,999
+        AAS5M010:    $45,000 to $49,999
+        AAS5M011:    $50,000 to $59,999
+        AAS5M012:    $60,000 to $74,999
+        AAS5M013:    $75,000 to $99,999
+        AAS5M014:    $100,000 to $124,999
+        AAS5M015:    $125,000 to $149,999
+        AAS5M016:    $150,000 to $199,999
+        AAS5M017:    $200,000 or more
+ 
+    Table 11:    Types of Health Insurance Coverage by Age
+    Universe:    Civilian noninstitutionalized population
+    Source code: C27010
+    NHGIS code:  AA6L
+        AA6LM001:    Total
+        AA6LM002:    Under 18 years
+        AA6LM003:    Under 18 years: With private health insurance only
+        AA6LM004:    Under 18 years: With public coverage only
+        AA6LM005:    Under 18 years: With both private and public coverage
+        AA6LM006:    Under 18 years: No health insurance coverage
+        AA6LM007:    18 to 34 years
+        AA6LM008:    18 to 34 years: With private health insurance only
+        AA6LM009:    18 to 34 years: With public coverage only
+        AA6LM010:    18 to 34 years: With both private and public coverage
+        AA6LM011:    18 to 34 years: No health insurance coverage
+        AA6LM012:    35 to 64 years
+        AA6LM013:    35 to 64 years: With private health insurance only
+        AA6LM014:    35 to 64 years: With public coverage only
+        AA6LM015:    35 to 64 years: With both private and public coverage
+        AA6LM016:    35 to 64 years: No health insurance coverage
+        AA6LM017:    65 years and over
+        AA6LM018:    65 years and over: With private health insurance only
+        AA6LM019:    65 years and over: With public coverage only
+        AA6LM020:    65 years and over: With both private and public coverage
+        AA6LM021:    65 years and over: No health insurance coverage
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+  data related to a particular publication. Contact us for permission for any other 
+  redistribution; we will consider requests for free and commercial redistribution.
+
+* CITATION: You will cite NHGIS appropriately.
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+      should include the following citation:
+
+        Steven Manson, Jonathan Schroeder, David Van Riper, and Steven Ruggles. 
+        IPUMS National Historical Geographic Information System: Version 13.0 
+        [Database]. Minneapolis: University of Minnesota. 2018. 
+        http://doi.org/10.18128/D050.V13.0
+
+    * Publications and research reports employing school attendance areas data 
+      (either tabular or GIS) must cite it appropriately. The citation should 
+      include the following:
+
+        The College of William and Mary and the Minnesota Population Center.
+        School Attendance Boundary Information System (SABINS): Version 1.0.
+        Minneapolis, MN: University of Minnesota 2011.
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+      recommend that you cite the use of NHGIS data as follows:
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+    * If possible, citations involving school attendance areas should also include
+      the URL for the SABINS site:
+
+        http://www.sabinsdata.org/.
+
+These terms of use are a legally binding agreement. You can use the data only in 
+accordance with these terms, and any other use is a violation of the agreement. 
+Violations may result in revocation of the agreement and prohibition from using other 
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+responsible for all damages, including reasonable attorney's fees and expenses.
+        
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+
+Send electronic material to: nhgis@umn.edu
+
+Printed matter should be sent to:
+
+    IPUMS NHGIS
+    Institute for Social Research and Data Innovation
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455
