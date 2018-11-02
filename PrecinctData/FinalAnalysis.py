@@ -13,6 +13,8 @@ import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import RidgeCV
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 #Importing data
 df = pd.read_csv('FinalDataLong.csv',encoding = 'utf8')
@@ -36,6 +38,13 @@ df = pd.get_dummies(df)
 #Variable importances
 X_train = df.drop(['Turnout','Turnout_R','Turnout_DFL'],axis=1)
 y_train = df['Turnout']
+
+#Univariate Analysis
+#Demographic Proportions
+for i in [x for x in X_train.columns.tolist() if not x.startswith('COUNTYNAME_')]:
+    print(i)
+    print(X_train[i].hist(bins=30))
+    plt.show()
 
 #Running a random forest for variable importance
 rf = RandomForestRegressor(n_estimators = 1000,
@@ -74,8 +83,6 @@ binomial_results.summary()
 binomial_results.predict(X_train)
 
 #Correlation heatmap
-import seaborn as sns
-import matplotlib.pyplot as plt
 def halfHeatMap(df, mirror):
     # Create Correlation df
     corr = df.corr()
@@ -111,7 +118,7 @@ halfHeatMap(df_sub, mirror = False)
 
 #Lets just see an array
 df_sub_corr = df_sub.corr()[['Turnout','Turnout_R','Turnout_DFL']]
-df_sub_corr.index = [x.replace('Proportion','Prop')[0:12] for x in df_sub_corr.index.tolist()]
+#df_sub_corr.index = [x.replace('Proportion','Prop')[0:12] for x in df_sub_corr.index.tolist()]
 df_sub_corr
 fig, ax = plt.subplots(figsize=(10, 10))
 colormap = sns.diverging_palette(220, 10, as_cmap=True)
@@ -123,3 +130,4 @@ plt.xticks(range(len(df_sub_corr.columns)), df_sub_corr.columns);
 plt.yticks(range(len(df_sub_corr.index)), df_sub_corr.index)
 #show plot
 plt.show()
+df_sub_corr.to_csv('ImportantCorrelations.csv')
