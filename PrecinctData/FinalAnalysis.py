@@ -28,7 +28,9 @@ df.drop(['White',
          'Hispanic or Latino (of any race)',
          'Votes', 
          'Votes_R', 
-         'Votes_DFL'],inplace = True, axis = 1)
+         'Votes_DFL',
+         'FemalePop',
+         'MalePop'],inplace = True, axis = 1)
 df = pd.get_dummies(df)
 
 #Variable importances
@@ -46,8 +48,22 @@ rf.fit(X_train, y_train)
 pd.Series(rf.feature_importances_, index = X_train.columns.tolist()).sort_values(ascending = False)
 
 #Lets look at ridge coefficients
-ridge = RidgeCV(cv = 5)
+ridge = RidgeCV(np.linspace(0,10,50),cv = 5)
 ridge.fit(X_train, y_train)
 coefs = pd.Series(ridge.coef_, index = X_train.columns.tolist()).sort_values(ascending = False).to_frame()
 coefs['abs'] = coefs[0].abs()
-coefs.sort_values('abs', ascending = False).drop('abs', axis=1).round(3)
+coefs = coefs.sort_values('abs', ascending = False).drop('abs', axis=1).round(4)
+
+#Lets drop countynames
+coefs.reset_index(inplace=True)
+coefs[~coefs['index'].str.startswith('COUNTYNAME_')].set_index('index')
+
+#Lets try a logit model which may be better
+import statsmodels.api as sm
+X_train = sm.add_constant(X_train)
+binomial_model = sm.GLM(y_train, X_train, family=sm.families.Binomial())
+binomial_results = binomial_model.fit()
+binomial_results.summary()
+
+#What would our predictions look like?
+binomial_results.predict(X_train)

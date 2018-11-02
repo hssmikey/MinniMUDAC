@@ -41,6 +41,14 @@ df_demo = pd.read_csv('Final2016DemographicData.csv', encoding = 'utf8')
 df = df.merge(df_demo, left_on = 'COUNTYNAME', right_on = 'County')
 df.drop(['County_x','County_y','2010Votes_Total','2012Votes_Total','2014Votes_Total','2016Votes_Total'], axis = 1, inplace = True)
 
+#Now merging with educational data
+df_educ = pd.read_csv('FinalEducationData2016.csv')
+df_educ.columns = ['County']+[x.replace('Percent; Estimate; Population 25 years and over - ','Prop ') for x in df_educ.drop(['Geography'],axis=1).columns.tolist()]
+for i in df_educ.drop(['County'],axis=1).columns.tolist():
+    df_educ[i] = df_educ[i]/100
+df = df.merge(df_educ, left_on = 'COUNTYNAME', right_on='County')
+df.drop(['County'],axis=1,inplace=True)
+
 #Saving the final data to a CSV
 df.to_csv('FinalData.csv', index = False)
 
@@ -83,6 +91,18 @@ df['FemalePop'] = np.where(df['Year']=='2010',df['Female2010'],
 df['FemaleProp'] = np.where(df['Year']=='2010',df['2010FemaleProp'],
                    np.where(df['Year']=='2012',df['2012FemaleProp'],
                    np.where(df['Year']=='2014',df['2014FemaleProp'],df['2016FemaleProp'])))
+df['MillenialProp'] = np.where(df['Year']=='2010',df['2010MilProp'],
+                   np.where(df['Year']=='2012',df['2012MilProp'],
+                   np.where(df['Year']=='2014',df['2014MilProp'],df['2016MilProp'])))
+df['GenXProp'] = np.where(df['Year']=='2010',df['2010GenXProp'],
+                   np.where(df['Year']=='2012',df['2012GenXProp'],
+                   np.where(df['Year']=='2014',df['2014GenXProp'],df['2016GenXProp'])))
+df['BoomerProp'] = np.where(df['Year']=='2010',df['2010BoomerProp'],
+                   np.where(df['Year']=='2012',df['2012BoomerProp'],
+                   np.where(df['Year']=='2014',df['2014BoomerProp'],df['2016BoomerProp'])))
+df['SilentProp'] = np.where(df['Year']=='2010',df['2010SilentProp'],
+                   np.where(df['Year']=='2012',df['2012SilentProp'],
+                   np.where(df['Year']=='2014',df['2014SilentProp'],df['2016SilentProp'])))
 df.drop(['Total2010',
          'Total2012',
          'Total2014',
@@ -118,7 +138,39 @@ df.drop(['Total2010',
          'Male2014', 
          'Female2014', 
          'Male2016', 
-         'Female2016'],axis = 1, inplace = True)
+         'Female2016',
+         '2010Millenial',
+         '2012Millenial',
+         '2014Millenial',
+         '2016Millenial',
+         '2010GenX',
+         '2012GenX',
+         '2014GenX',
+         '2016GenX',
+         '2010Boomer',
+         '2012Boomer',
+         '2014Boomer',
+         '2016Boomer',
+         '2010Silent',
+         '2012Silent',
+         '2014Silent',
+         '2016Silent',
+         '2010MilProp',
+         '2012MilProp',
+         '2014MilProp',
+         '2016MilProp',
+         '2010GenXProp',
+         '2012GenXProp',
+         '2014GenXProp',
+         '2016GenXProp',
+         '2010BoomerProp',
+         '2012BoomerProp',
+         '2014BoomerProp',
+         '2016BoomerProp',
+         '2010SilentProp',
+         '2012SilentProp',
+         '2014SilentProp',
+         '2016SilentProp'],axis = 1, inplace = True)
 df['Midterms'] = np.where(df['Year'].isin(['2010','2014']),1,0)
 df['Year'] = df['Year'].astype('int')
 df.drop(['Total population'], axis=1).to_csv('FinalDataLong.csv',encoding='utf8',index=False)
