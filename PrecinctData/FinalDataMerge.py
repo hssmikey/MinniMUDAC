@@ -49,6 +49,22 @@ for i in df_educ.drop(['County'],axis=1).columns.tolist():
 df = df.merge(df_educ, left_on = 'COUNTYNAME', right_on='County')
 df.drop(['County'],axis=1,inplace=True)
 
+#Creating our region variable
+northwest = ['Kittson','Roseau','Lake of the Woods','Marshall','Beltrami','Pennington', 'Red Lake','Polk','Norman','Mahnomen','Clearwater','Hubbard']
+northland = ['Koochiching','Itasca','Aitkin','Carlton','St. Louis','Lake','Cook']
+west_central = ['Clay','Becker','Wilkin','Otter Tail','Traverse','Douglas','Grant','Stevens','Pope']
+central = ['Wadena','Cass','Crow Wing','Todd','Morrison','Stearns','Benton','Mille Lacs','Sherburne','Wright','Kanabec','Isanti','Pine','Chisago']
+southwest = ['Big Stone','Lac qui Parle','Swift','Chippewa','Kandiyohi','Meeker','McLeod','Renville','Yellow Medicine','Redwood','Lyon','Lincoln','Cottonwood','Murray','Pipestone','Jackson','Nobles','Rock']
+twin_cities = ['Anoka','Washington','Ramsey','Hennepin','Carver','Scott','Dakota']
+southern = ['Sibley','Nicollet','Brown','Watonwan','Martin','Faribault','Blue Earth','Le Sueur','Waseca','Freeborn','Steele','Rice','Goodhue','Dodge','Mower','Wabasha','Olmsted','Fillmore','Houston','Winona']
+df['Region'] = np.where(df['COUNTYNAME'].isin(northwest),'Northwest',
+  np.where(df['COUNTYNAME'].isin(northland),'Northland',
+           np.where(df['COUNTYNAME'].isin(west_central),'West Central',
+                    np.where(df['COUNTYNAME'].isin(central),'Central',
+                             np.where(df['COUNTYNAME'].isin(southwest),'Southwest',
+                                      np.where(df['COUNTYNAME'].isin(twin_cities),'Twin Cities',
+                                               np.where(df['COUNTYNAME'].isin(southern),'Southern',np.nan)))))))
+
 #Saving the final data to a CSV
 df.to_csv('FinalData.csv', index = False)
 
