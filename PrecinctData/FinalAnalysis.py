@@ -15,30 +15,10 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import RidgeCV
 
 #Importing data
-df = pd.read_csv('FinalData.csv',encoding = 'utf8')
+df = pd.read_csv('FinalDataLong.csv',encoding = 'utf8')
 
 #Lets take only interesting columns
-df = df[['COUNTYNAME',
-         '2010Turnout',
-         '2012Turnout', 
-         '2014Turnout', 
-         '2016Turnout',
-         'Total2010',
-         'Total2012',
-         'Total2014',
-         'Total2016',
-         '2010FemaleProp',
-         '2012FemaleProp',
-         '2014FemaleProp',
-         '2016FemaleProp',
-         'Proportion White', 
-         'Proportion Black or African American',
-         'Proportion American Indian and Alaska Native', 
-         'Proportion Asian',
-         'Proportion Native Hawaiian and Other Pacific Islander',
-         'Proportion Some other race', 
-         'Proportion Two or more races',
-         'Proportion Hispanic or Latino (of any race)']]
+df.drop(['])
 
 #We need to convert from wide to long format using a year column
 df = df.melt(id_vars = df.drop(['2010Turnout',
