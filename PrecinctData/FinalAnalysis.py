@@ -18,7 +18,10 @@ from sklearn.linear_model import RidgeCV
 df = pd.read_csv('FinalDataLong.csv',encoding = 'utf8')
 
 #Lets take only interesting columns
-df.drop(['])
+df.drop(['White', 'Black or African American',
+       'American Indian and Alaska Native', 'Asian',
+       'Native Hawaiian and Other Pacific Islander', 'Some other race',
+       'Two or more races', 'Hispanic or Latino (of any race)','Votes', 'Votes_R', 'Votes_DFL',],inplace = True, axis = 1)
 
 #We need to convert from wide to long format using a year column
 df = df.melt(id_vars = df.drop(['2010Turnout',

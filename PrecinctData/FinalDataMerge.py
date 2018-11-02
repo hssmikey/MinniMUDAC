@@ -112,7 +112,8 @@ df.drop(['Total2010',
          'Male2014', 
          'Female2014', 
          'Male2016', 
-         'Female2016'],axis = 1, inplace = True)
+         'Female2016',
+         'Total population'],axis = 1, inplace = True)
 df['Midterms'] = np.where(df['Year'].isin(['2010','2014']),1,0)
 df['Year'] = df['Year'].astype('int')
 df.to_csv('FinalDataLong.csv',encoding='utf8',index=False)
