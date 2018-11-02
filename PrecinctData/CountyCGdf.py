@@ -10,7 +10,7 @@ This script is used to create our single CSV file of county votes
 
 #Loading packages
 import pandas as pd
-
+'''
 #First lets get a by-county dataset
 #2000
 df2000 = pd.read_excel('2000_general_results.xls')
@@ -44,32 +44,66 @@ df2008 = pd.read_excel('2008_general_results.xls',sheetname = 0)
 df2008 = df2008[['CountyID','TotVoters']]
 df2008.columns = ['CountyCode','2008Votes']
 df['2008Votes'] = df2008.groupby(['CountyCode']).sum()['2008Votes']
-
+'''
 #2010
 df2010 = pd.read_excel('2010_general_results_final.xls',sheetname = 0)
-df2010 = df2010[['CountyID','TotVoters']]
-df2010.columns = ['CountyCode','2010Votes']
-df['2010Votes'] = df2010.groupby(['CountyCode']).sum()['2010Votes']
+df2010 = df2010[['CountyID',
+                 'TotVoters',
+                 'CONGR',
+                 'CONGDFL',
+                 'CONGTOT']]
+df2010.columns = ['CountyCode',
+                  '2010Votes',
+                  '2010Votes_R',
+                  '2010Votes_DFL',
+                  '2010Votes_Total']
+df2010 = df2010.groupby(['CountyCode']).sum()
 
 #2012
 df2012 = pd.read_excel('2012mngeneralelectionresults_official_postrecounts.xlsx',sheetname = 0)
-df2012 = df2012[['COUNTYCODE','TOTVOTING']]
-df2012.columns = ['CountyCode','2012Votes']
-df['2012Votes'] = df2012.groupby(['CountyCode']).sum()['2012Votes']
+df2012 = df2012[['COUNTYCODE',
+                 'TOTVOTING',
+                 'USPRSR',
+                 'USPRSDFL',
+                 'USPRSTOTAL']]
+df2012.columns = ['CountyCode',
+                  '2012Votes',
+                  '2012Votes_R',
+                  '2012Votes_DFL',
+                  '2012Votes_Total']
+df2012 = df2012.groupby(['CountyCode']).sum()
 
 #2014
 df2014 = pd.read_excel('2014-general-federal-state-results-by-precinct-official.xlsx',sheetname = 0)
-df2014 = df2014[['COUNTYCODE','TOTVOTING']]
-df2014.columns = ['CountyCode','2014Votes']
-df['2014Votes'] = df2014.groupby(['CountyCode']).sum()['2014Votes']
+df2014 = df2014[['COUNTYCODE',
+                 'TOTVOTING',
+                 'USSENR',
+                 'USSENDFL',
+                 'USSENTOTAL']]
+df2014.columns = ['CountyCode',
+                  '2014Votes',
+                  '2014Votes_R',
+                  '2014Votes_DFL',
+                  '2014Votes_Total']
+df2014 = df2014.groupby(['CountyCode']).sum()
 
 #2016
 df2016 = pd.read_excel('2016-general-federal-state-results-by-precinct-official.xlsx',sheetname = 0)
-df2016 = df2016[['COUNTYCODE','TOTVOTING']]
-df2016.columns = ['CountyCode','2016Votes']
-df['2016Votes'] = df2016.groupby(['CountyCode']).sum()['2016Votes']
+df2016 = df2016[['COUNTYCODE',
+                 'TOTVOTING',
+                 'USPRSR',
+                 'USPRSDFL',
+                 'USPRSTOTAL']]
+df2016.columns = ['CountyCode',
+                  '2016Votes',
+                  '2016Votes_R',
+                  '2016Votes_DFL',
+                  '2016Votes_Total']
+df2016 = df2016.groupby(['CountyCode']).sum()
 
-
+#Binding all years together
+df = df2010.merge(df2012, left_index=True,right_index=True).merge(df2014, left_index=True,right_index=True).merge(df2016, left_index=True,right_index=True)
+df.columns
 #Now we have to sub in county names
 county_list = pd.read_excel('2016-general-federal-state-results-by-precinct-official.xlsx',sheetname = 0)
 county_list = county_list[['COUNTYNAME','COUNTYCODE']].groupby(['COUNTYCODE']).first()
