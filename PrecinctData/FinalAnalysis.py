@@ -12,13 +12,13 @@ Final analysis script!
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.linear_model import RidgeCV
+from sklearn.linear_model import RidgeCV, LinearRegression
 import seaborn as sns
 import matplotlib.pyplot as plt
 
 #Importing data
 df = pd.read_csv('FinalDataLong.csv',encoding = 'utf8')
-
+df_backup = df
 #Lets take only interesting columns
 df.drop(['White', 
          'Black or African American',
@@ -102,3 +102,48 @@ plt.yticks(range(len(df_sub_corr.index)), df_sub_corr.index)
 #show plot
 plt.show()
 df_sub_corr.to_csv('ImportantCorrelations.csv')
+
+###############################################################################
+#Time for creating the actual predictions
+###############################################################################
+#We want first:
+#County-level
+#Midterm:1
+#Year:2018
+#Use 2016 Demographic data
+#We need to forecast total population for each county
+
+#We will use our RF from earlier
+
+#Creating our new prediction data
+X_test = X_train[X_train['Year']==2016]
+X_test.reset_index(inplace=True)
+X_test.drop(['index'],axis=1,inplace=True)
+X_test['Year'] = 2018
+X_test['Midterms'] = 1
+
+#Now we need to adjust for population changes
+X_pop = X_train.drop(['TotalPop'],axis=1)
+y_pop = X_train['TotalPop']
+
+#Fitting a linear trend for this
+forecasts = []
+for i in [x for x in X_train.columns if x.startswith('COUNTYNAME_')]:
+    df_forecast = X_train[X_train[i]==1]
+    X_forecast = df_forecast['Year'].values.reshape(-1,1)
+    y_forecast = df_forecast['TotalPop']
+    model = LinearRegression()
+    model.fit(X_forecast,y_forecast)
+    forecasts.append(model.predict(np.array([2018]).reshape(-1,1)).tolist()[0])
+pd.DataFrame({'2010':X_train[X_train['Year']==2010]['TotalPop'].tolist(),
+              '2012':X_train[X_train['Year']==2012]['TotalPop'].tolist(),
+              '2014':X_train[X_train['Year']==2014]['TotalPop'].tolist(),
+              '2016':X_train[X_train['Year']==2016]['TotalPop'].tolist(),
+              '2018':forecasts})
+
+#Imputing new population values
+X_test['TotalPop'] = forecasts
+
+#Lets predict
+count_preds = rf.predict(X_test)
+count_preds

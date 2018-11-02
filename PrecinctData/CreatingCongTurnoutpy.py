@@ -128,4 +128,4 @@ df_cong = df_cong.merge(df,left_on = 'Year',right_on='Year')
 cong_pops = pd.read_csv('CongPopsLong.csv')
 df_cong['Votes'] = [df_cong['Votes'].tolist()[x]/cong_pops['VotingPop'].tolist()[x] for x in df_cong.index.tolist()]
 df_cong['District']= [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8]
-df_cong
+df_cong.to_csv('CongressionalTurnout.csv',index = False)
