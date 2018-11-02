@@ -18,43 +18,21 @@ from sklearn.linear_model import RidgeCV
 df = pd.read_csv('FinalDataLong.csv',encoding = 'utf8')
 
 #Lets take only interesting columns
-df.drop(['White', 'Black or African American',
-       'American Indian and Alaska Native', 'Asian',
-       'Native Hawaiian and Other Pacific Islander', 'Some other race',
-       'Two or more races', 'Hispanic or Latino (of any race)','Votes', 'Votes_R', 'Votes_DFL',],inplace = True, axis = 1)
-
-#We need to convert from wide to long format using a year column
-df = df.melt(id_vars = df.drop(['2010Turnout',
-                        '2012Turnout', 
-                        '2014Turnout', 
-                        '2016Turnout'],axis = 1).columns.tolist(),
-             value_vars = ['2010Turnout',
-                        '2012Turnout', 
-                        '2014Turnout', 
-                        '2016Turnout'],
-              var_name = 'Year',
-              value_name = 'Turnout')
-df['Year'] = [x[0:4] for x in df.Year.tolist()]
-df['Total'] = np.where(df['Year']=='2010',df['Total2010'],
-              np.where(df['Year']=='2012',df['Total2012'],
-              np.where(df['Year']=='2014',df['Total2014'],df['Total2016'])))
-df['FemaleProp'] = np.where(df['Year']=='2010',df['2010FemaleProp'],
-                   np.where(df['Year']=='2012',df['2012FemaleProp'],
-                   np.where(df['Year']=='2014',df['2014FemaleProp'],df['2016FemaleProp'])))
-df.drop(['Total2010',
-         'Total2012',
-         'Total2014',
-         'Total2016',
-         '2010FemaleProp',
-         '2012FemaleProp',
-         '2014FemaleProp',
-         '2016FemaleProp'],axis = 1, inplace = True)
-df['Midterms'] = np.where(df['Year'].isin(['2010','2014']),1,0)
-df['Year'] = df['Year'].astype('int')
+df.drop(['White', 
+         'Black or African American',
+         'American Indian and Alaska Native', 
+         'Asian',
+         'Native Hawaiian and Other Pacific Islander', 
+         'Some other race',
+         'Two or more races', 
+         'Hispanic or Latino (of any race)',
+         'Votes', 
+         'Votes_R', 
+         'Votes_DFL'],inplace = True, axis = 1)
 df = pd.get_dummies(df)
 
 #Variable importances
-X_train = df.drop(['Turnout'],axis=1)
+X_train = df.drop(['Turnout','Turnout_R','Turnout_DFL'],axis=1)
 y_train = df['Turnout']
 
 #Running a random forest for variable importance

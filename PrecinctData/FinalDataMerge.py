@@ -74,6 +74,12 @@ df['Turnout_DFL'] = np.where(df['Year']=='2010',df['2010Turnout_DFL'],
 df['TotalPop'] = np.where(df['Year']=='2010',df['Total2010'],
                  np.where(df['Year']=='2012',df['Total2012'],
                 np.where(df['Year']=='2014',df['Total2014'],df['Total2016'])))
+df['MalePop'] = np.where(df['Year']=='2010',df['Male2010'],
+                 np.where(df['Year']=='2012',df['Male2012'],
+                np.where(df['Year']=='2014',df['Male2014'],df['Male2016'])))
+df['FemalePop'] = np.where(df['Year']=='2010',df['Female2010'],
+                 np.where(df['Year']=='2012',df['Female2012'],
+                np.where(df['Year']=='2014',df['Female2014'],df['Female2016'])))
 df['FemaleProp'] = np.where(df['Year']=='2010',df['2010FemaleProp'],
                    np.where(df['Year']=='2012',df['2012FemaleProp'],
                    np.where(df['Year']=='2014',df['2014FemaleProp'],df['2016FemaleProp'])))
@@ -112,8 +118,41 @@ df.drop(['Total2010',
          'Male2014', 
          'Female2014', 
          'Male2016', 
-         'Female2016',
-         'Total population'],axis = 1, inplace = True)
+         'Female2016'],axis = 1, inplace = True)
 df['Midterms'] = np.where(df['Year'].isin(['2010','2014']),1,0)
 df['Year'] = df['Year'].astype('int')
-df.to_csv('FinalDataLong.csv',encoding='utf8',index=False)
+df.drop(['Total population'], axis=1).to_csv('FinalDataLong.csv',encoding='utf8',index=False)
+
+#Lets get Minnesota level data
+df.drop(['COUNTYNAME',
+         'Turnout',
+         'Turnout_R',
+         'Turnout_DFL',
+         'FemaleProp',
+         'Midterms',
+         'Proportion White', 
+         'Proportion Black or African American',
+         'Proportion American Indian and Alaska Native', 
+         'Proportion Asian',
+         'Proportion Native Hawaiian and Other Pacific Islander',
+         'Proportion Some other race', 
+         'Proportion Two or more races',
+         'Proportion Hispanic or Latino (of any race)'],axis=1,inplace=True)
+df = df.groupby('Year').sum()
+df['White_Prop'] = df['White']/df['Total population']
+df['Black or African American_Prop'] = df['Black or African American']/df['Total population']
+df['American Indian and Alaska Native_Prop'] = df['American Indian and Alaska Native']/df['Total population']
+df['Asian_Prop'] = df['Asian']/df['Total population']
+df['Native Hawaiian and Other Pacific Islander_Prop'] = df['Native Hawaiian and Other Pacific Islander']/df['Total population']
+df['Some other race_Prop'] = df['Some other race']/df['Total population']
+df['Two or more races_Prop'] = df['Two or more races']/df['Total population']
+df['Hispanic or Latino (of any race)_Prop'] = df['Hispanic or Latino (of any race)']/df['Total population']
+df['Turnout'] = df['Votes']/df['TotalPop']
+df['Turnout_R'] = df['Votes_R']/df['TotalPop']
+df['Turnout_DFL'] = df['Votes_DFL']/df['TotalPop']
+df['FemaleProp'] = df['FemalePop']/df['TotalPop']
+df.drop(['Total population', 'White', 'Black or African American',
+       'American Indian and Alaska Native', 'Asian',
+       'Native Hawaiian and Other Pacific Islander', 'Some other race',
+       'Two or more races', 'Hispanic or Latino (of any race)','TotalPop', 'MalePop', 'FemalePop','Votes','Votes_R','Votes_DFL'],axis=1,inplace=True)
+df.to_csv('MNbyYear.csv')
