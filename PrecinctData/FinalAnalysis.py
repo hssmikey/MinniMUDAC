@@ -12,7 +12,7 @@ Final analysis script!
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.linear_model import RidgeCV, LinearRegression
+from sklearn.linear_model import RidgeCV, LinearRegression,Ridge
 import seaborn as sns
 import matplotlib.pyplot as plt
 
@@ -115,6 +115,37 @@ df_sub_corr.to_csv('ImportantCorrelations.csv')
 
 #We will use our RF from earlier
 
+#Importing data
+df = pd.read_csv('FinalDataLong.csv',encoding = 'utf8')
+df_backup = df
+#Lets take only interesting columns
+df.drop(['White', 
+         'Black or African American',
+         'American Indian and Alaska Native', 
+         'Asian',
+         'Native Hawaiian and Other Pacific Islander', 
+         'Some other race',
+         'Two or more races', 
+         'Hispanic or Latino (of any race)', 
+         'Votes_R', 
+         'Votes_DFL',
+         'Turnout',
+         'Turnout_R',
+         'Turnout_DFL',
+         'FemalePop',
+         'MalePop'],inplace = True, axis = 1)
+df = pd.get_dummies(df)
+
+#Variable importances
+X_train = df.drop(['Votes'],axis=1)
+y_train = df['Votes']
+
+#Lets log votes
+y_train = np.log(y_train)
+
+#We need to log totalpop
+X_train['TotalPop'] = np.log(X_train['TotalPop'])
+
 #Creating our new prediction data
 X_test = X_train[X_train['Year']==2016]
 X_test.reset_index(inplace=True)
@@ -148,21 +179,18 @@ X_test['TotalPop'] = forecasts
 from sklearn.model_selection import GridSearchCV
 params = {'n_estimators':[1000],
           'max_features':[None]}
-rf = RandomForestRegressor(n_estimators = 1000,
-                             n_jobs = -1,
-                             max_features = 'sqrt',
-                             random_state = 123)
+rf = RandomForestRegressor(n_jobs = -1,random_state = 123)
 gs = GridSearchCV(rf, params, cv=5,verbose=2)
 gs.fit(X_train, y_train)
 gs.best_params_
 
 #Lets predict
-count_preds = gs.predict(X_test)
+count_preds = np.exp(gs.predict(X_test)).astype('int')
 count_preds
 
 #Lets compare over time
 df_turnout = pd.read_csv('FinalData.csv')
-df_turnout = df_turnout[['COUNTYNAME','2010Turnout','2012Turnout','2014Turnout','2016Turnout']]
+df_turnout = df_turnout[['COUNTYNAME','2010Votes','2012Votes','2014Votes','2016Votes']]
 df_turnout['2018Prediction'] = count_preds
 df_turnout.to_csv('Predictions.csv', index = False)
 
@@ -174,4 +202,56 @@ district4 = ['Ramsey','Washington']
 district5 = ['Anoka','Ramsey']
 district6 = ['Anoka','Benton','Carver','Hennepin','Sherburne','Stearns','Washington','Wright']
 district7 = ['Becker','Beltrami','Big Stone','Chippewa','Clay','Clearwater','Cottonwood','Douglas','Grant','Kandiyohi','Kittson','Lac qui Parle','Lake of the Woods','Lincoln','Lyon','McLeod','Mahnomen','Marshall','Meeker','Murray','Norman','Otter Tail','Pennington','Pipestone','Polk','Pope','Red Lake','Redwood','Renville','Roseau','Sibley','Stearns','Stevens','Swift','Todd','Traverse','Wilkin','Yellow Medicine']
-district8 = ['Aitkkin','Beltrammi','Carlton','Cass','Chisago','Cook','Crow Wing','Hubbard','Isanti','Itasca','Kanabec','Koochiching','Lake','Mille Lacs','Morrison','Pine','St. Louis','Wadena',]
+district8 = ['Aitkin','Beltrami','Carlton','Cass','Chisago','Cook','Crow Wing','Hubbard','Isanti','Itasca','Kanabec','Koochiching','Lake','Mille Lacs','Morrison','Pine','St. Louis','Wadena']
+
+#Pulling in our congressional data
+df_cong = pd.read_csv('CongressionalVoteTotals.csv')
+
+#Making sure all counties are spelled correctly
+real_names = df_cong.drop(['Year','Votes','District'],axis=1).columns.tolist()
+our_names = list(set(district1+district2+district3+district4+district5+district6+district7+district8))
+len(real_names)-len(our_names)
+[print(x) for x in our_names if x not in real_names]
+[print(x) for x in real_names if x not in our_names]
+#We are good!
+
+#Which districts have split counties?
+b = {}
+for item in district1+district2+district3+district4+district5+district6+district7+district8:
+    b[item] = b.get(item, 0) + 1
+b = dict((k, v) for k, v in b.items() if v > 1)
+list(b.keys())
+#All districts have split counties
+district_counts = [district1,district2,district3,district4,district5,district6,district7,district8]
+estimator_list = []
+for i in [1,2,3,4,5,6,7,8]:
+    district_df = df_cong[(df_cong['District']==i)]#&(df_cong['Year'].isin([2010,2014]))]
+    district_df = district_df[['Votes']+district_counts[i-1]]
+    unique_counties = [x for x in district_counts[i-1] if x not in list(b.keys())]
+    reduc_df = district_df
+    for j in unique_counties:
+        reduc_df['Votes'] = reduc_df['Votes']-reduc_df[j]
+        reduc_df.drop([j],axis=1,inplace=True)
+    y = reduc_df['Votes']
+    x = reduc_df.drop(['Votes'],axis=1)
+    model = LinearRegression(fit_intercept=False).fit(x,y)
+    weights = dict(zip(x.columns.tolist(),model.coef_))
+    final_weights = []
+    for j in range(len(district_counts[i-1])):
+        if district_counts[i-1][j] not in list(b.keys()):
+            final_weights.append(1)
+        else:
+            final_weights.append(weights[district_counts[i-1][j]])
+    estimator_list.append(dict(zip(district_counts[i-1],final_weights)))
+
+predictions = pd.Series(count_preds, index = real_names)
+final_predictions = []
+for i in [1,2,3,4,5,6,7,8]:
+    subbed = predictions[list(estimator_list[i-1].keys())]
+    final_predictions.append(int(sum([a*b for a,b in zip(subbed.values,list(estimator_list[i-1].values()))])))
+final_predictions
+
+#Lets compare this to District totals
+df_final = pd.read_csv('CongressionalVoteTotalsWide.csv')
+df_final['2018preds'] = final_predictions
+df_final.to_csv('FinalCongressionalPredictions.csv',index=False)

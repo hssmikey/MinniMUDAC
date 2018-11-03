@@ -74,21 +74,8 @@ df['Year'] = [x[0:4] for x in df['index'].tolist()]
 df['Year'] = df['Year'].astype('int')
 df = df.iloc[[0,3,6,9]]
 df.drop(['index'],axis=1,inplace=True)
-
-#We need to convert this to proportions
-df_pop = pd.read_csv('PopulationData.csv')
-df_pop = df_pop[['County','Total2010','Total2012','Total2014','Total2016']]
-df_pop = df_pop.transpose()
-df_pop.columns = df_pop.iloc[0]
-df_pop = df_pop.reindex(df_pop.index.drop('County'))
-df_pop['Year'] = [x[-4:] for x in df_pop.index.tolist()]
-
-#Lets merge them
-df.set_index(['Year'],inplace=True)
-df_pop.set_index(['Year'],inplace=True)
-for i in df.columns.tolist():
-    df[i] = [df[i].tolist()[x]/df_pop[i].tolist()[x] for x in [0,1,2,3]]
-df.reset_index(inplace=True)
+df.reset_index(inplace = True)
+df.drop(['index'],axis=1,inplace=True)
 
 #Now lets do the congressional districts
 #2010
@@ -117,15 +104,19 @@ df2016 = df2016.groupby(['CG']).sum()
 
 #Binding all years together
 df_cong = df2010.merge(df2012, left_index=True,right_index=True).merge(df2014, left_index=True,right_index=True).merge(df2016, left_index=True,right_index=True)
+df_cong.to_csv('CongressionalVoteTotalsWide.csv')
 df_cong = df_cong.melt(value_vars = ['2010Votes','2012Votes','2014Votes','2016Votes'],
                        var_name = 'Year',
                        value_name = 'Votes')
 df_cong['Year'] = [x[0:4] for x in df_cong['Year'].tolist()]
 df_cong['Year'] = df_cong['Year'].astype('int')
 df_cong = df_cong.merge(df,left_on = 'Year',right_on='Year')
-
+df_cong['District']= [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8]
+df_cong.to_csv('CongressionalVoteTotals.csv',index = False)
+'''
 #Lets pull in congressional populations
 cong_pops = pd.read_csv('CongPopsLong.csv')
 df_cong['Votes'] = [df_cong['Votes'].tolist()[x]/cong_pops['VotingPop'].tolist()[x] for x in df_cong.index.tolist()]
 df_cong['District']= [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8]
 df_cong.to_csv('CongressionalTurnout.csv',index = False)
+'''
