@@ -144,6 +144,34 @@ pd.DataFrame({'2010':X_train[X_train['Year']==2010]['TotalPop'].tolist(),
 #Imputing new population values
 X_test['TotalPop'] = forecasts
 
+#Fitting a tuned random forest for prediction
+from sklearn.model_selection import GridSearchCV
+params = {'n_estimators':[1000],
+          'max_features':[None]}
+rf = RandomForestRegressor(n_estimators = 1000,
+                             n_jobs = -1,
+                             max_features = 'sqrt',
+                             random_state = 123)
+gs = GridSearchCV(rf, params, cv=5,verbose=2)
+gs.fit(X_train, y_train)
+gs.best_params_
+
 #Lets predict
-count_preds = rf.predict(X_test)
+count_preds = gs.predict(X_test)
 count_preds
+
+#Lets compare over time
+df_turnout = pd.read_csv('FinalData.csv')
+df_turnout = df_turnout[['COUNTYNAME','2010Turnout','2012Turnout','2014Turnout','2016Turnout']]
+df_turnout['2018Prediction'] = count_preds
+df_turnout.to_csv('Predictions.csv', index = False)
+
+#Now we need to convert this to congressional levels
+district1 = ['Blue Earth','Brown','Cottonwood','Dodge','Faribault','Fillmore','Freeborn','Houston','Jackson','Le Sueur','Martin','Mower','Nicollet','Nobles','Olmsted','Rice','Rock','Steele','Waseca','Watonwan','Winona']
+district2 = ['Dakota','Goodhue','Rice','Scott','Wabasha','Washington']
+district3 = ['Anoka','Carver','Hennepin']
+district4 = ['Ramsey','Washington']
+district5 = ['Anoka','Ramsey']
+district6 = ['Anoka','Benton','Carver','Hennepin','Sherburne','Stearns','Washington','Wright']
+district7 = ['Becker','Beltrami','Big Stone','Chippewa','Clay','Clearwater','Cottonwood','Douglas','Grant','Kandiyohi','Kittson','Lac qui Parle','Lake of the Woods','Lincoln','Lyon','McLeod','Mahnomen','Marshall','Meeker','Murray','Norman','Otter Tail','Pennington','Pipestone','Polk','Pope','Red Lake','Redwood','Renville','Roseau','Sibley','Stearns','Stevens','Swift','Todd','Traverse','Wilkin','Yellow Medicine']
+district8 = ['Aitkkin','Beltrammi','Carlton','Cass','Chisago','Cook','Crow Wing','Hubbard','Isanti','Itasca','Kanabec','Koochiching','Lake','Mille Lacs','Morrison','Pine','St. Louis','Wadena',]
