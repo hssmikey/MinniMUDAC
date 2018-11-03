@@ -225,7 +225,7 @@ list(b.keys())
 district_counts = [district1,district2,district3,district4,district5,district6,district7,district8]
 estimator_list = []
 for i in [1,2,3,4,5,6,7,8]:
-    district_df = df_cong[(df_cong['District']==i)]#&(df_cong['Year'].isin([2010,2014]))]
+    district_df = df_cong[(df_cong['District']==i)&(df_cong['Year'].isin([2014,2016]))]
     district_df = district_df[['Votes']+district_counts[i-1]]
     unique_counties = [x for x in district_counts[i-1] if x not in list(b.keys())]
     reduc_df = district_df
